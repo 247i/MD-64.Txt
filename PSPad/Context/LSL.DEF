@@ -1,0 +1,1860 @@
+; PSPad clip definition file for LSL (Linden Scripting Language)
+; https://wiki.secondlife.com/wiki/LSL_Portal
+; Author: Torsten Funk
+; Last Revision: 2026-01-23
+
+[Macro definition]
+; Help file > Working with PSPad > Context Files > Interactive Clips
+; Format; 	%control%=@x caption,text,default,options,delimiter,dialog_type
+%avatar%=@E Avatar (key):
+%end%=@E End (integer):
+%color%=@L Color:,,"<1.0, 1.0, 1.0>",,"
+%id%=@E Id (key):
+%link%=@E Link ID (integer):
+%src%=@E Source:,,,,",
+%start%=@E Start (integer):
+%string%=@E String:,,,,",
+%message%=@E Message (string):,,,,",
+%user%=@E User (key):
+%val%=@E Integer:
+
+; EVENTS
+[attach | Triggered in an object when the object attaches or detaches from agent.]
+attach(key id) {
+    |
+}
+[at_rot_target | Result of llRotTarget library function call.]
+at_rot_target(integer handle, rotation targetrot, rotation ourrot) {
+    |
+}
+[at_target | Result of llTarget library function call.]
+at_target(integer tnum, vector targetpos, vector ourpos) {
+    |
+}
+[changed | Various changes to the object/prim trigger this event.]
+changed(integer change) {
+    |
+}
+[collision | Triggered while task is colliding with another task.]
+collision(integer num_detected) {
+    |
+}
+[collision_end | Triggered when task stops colliding with another task.]
+collision_end(integer num_detected) {
+    |
+}
+[collision_start | Triggered when task starts colliding with another task]
+collision_start(integer num_detected) {
+    |
+}
+[control | Result of llTakeControls library function call and user input.]
+control(key id, integer level, integer edge) {
+    |
+}
+[dataserver | Triggered when task receives asynchronous data.]
+dataserver(key queryid, string data) {
+    |
+}
+[email | Triggered as a result of calling llGetNextEmail where there is a matching email in the email queue.]
+email(string time, string address, string subject, string message, integer num_left) {
+    |
+}
+[experience_permissions | The agent has approved an experience permissions request.]
+experience_permissions(key agent_id) {
+    |
+}
+[experience_permissions_denied | The agent has denied experience permission.]
+experience_permissions_denied(key agent_id, integer reason) {
+    |
+}
+[Final damage | Triggered after all on_damage events in all scripts and attachments.]
+final_damage(integer num_detected) {
+    |
+}
+[game_control | Triggered when compatible viewer sends fresh GameControlInput message, but only for scripts on attachments or seat.]
+game_control(key id, integer button_levels, list axes) {
+    |
+}
+[http_request | Triggered when task receives an HTTP request.]
+http_request(key request_id, string method, string body) {
+    |
+}
+[http_response | Triggered when task receives a response to one of its llHTTPRequests.]
+http_response(key request_id, integer status, list metadata, string body) {
+    |
+}
+[land_collision | Triggered in the root when physical object or attached avatar is colliding with land.]
+land_collision(vector pos) {
+    |
+}
+[land_collision_end | Triggered in the root when a physical object or attached avatar stops colliding with land.]
+land_collision_end(vector pos) {
+    |
+}
+[land_collision_start | Triggered in the root when a physical object or attached avatar starts colliding with land.]
+land_collision_start(vector pos) {
+    |
+}
+[linkset_data | The linkset_data event fires in all scripts in a linkset whenever the datastore has been modified through a call to one of the llLinksetData functions.]
+linkset_data(integer action, string name, string value) {
+    |
+}
+[link_message | Triggered when the script receives a link message that was sent by a call to llMessageLinked. llMessageLinked is used to send messages from one script to another.]
+link_message(integer sender_num, integer num, string str, key id) {
+    |
+}
+[listen | Triggered by chat, use llListen to enable and filter.]
+listen(integer channel, string name, key id, string message) {
+    |
+}
+[money | Triggered when money is paid to the prim in the amount by id.]
+money(key id, integer amount) {
+    |
+}
+[moving_end | Triggered when task stops moving]
+moving_end() {
+    |
+}
+[moving_start | Triggered when task begins moving]
+moving_start() {
+    |
+}
+[not_at_rot_target | Result of llRotTarget library function call.]
+not_at_rot_target() {
+    |
+}
+[not_at_target | Triggered if an object has not yet reached the target set by the call to llTarget.]
+not_at_target() {
+    |
+}
+[no_sensor | Result of a call to llSensor or llSensorRepeat.]
+no_sensor() {
+    |
+}
+[object_rez | Triggered when the object rezzes an object.]
+object_rez(key id) {
+    |
+}
+[on_death | This event is triggered on all attachments worn by an avatar when that avatar's health reaches 0.]
+on_death() {
+    |
+}
+[on_damage | This event is triggered when damage has been inflicted on an avatar or task in the world but before damage has been applied or distributed.]
+on_damage(integer num_detected) {
+    |
+}
+[on_rez | Triggered when an object is rezzed (by script or by user). Also triggered in attachments when a user logs in, or when the object is attached from inventory.]
+on_rez(integer start_param) {
+    |
+}
+[path_update | --unknown---]
+path_update(integer type, list reserved) {
+    |
+}
+[run_time_permissions | Triggered when an agent grants run time permissions to this script.]
+run_time_permissions(integer perm) {
+    |
+}
+[sensor | Results from a call to either llSensor or llSensorRepeat.]
+sensor(integer num_detected) {
+    |
+}
+[state_entry | Triggered on any state transition and startup.]
+state_entry() {
+    |
+}
+[state_exit | Triggered on a qualifying state transition.]
+state_exit() {
+    |
+}
+[timer | Repeats the code in the timer(). Result of the llSetTimerEvent library function call.]
+timer() {
+    |
+}
+[touch | Triggered whilst an agent is clicking the task.]
+touch(integer num_detected) {
+    |
+}
+[touch_end | Triggered when agent stops clicking on task.]
+touch_end(integer num_detected) {
+    |
+}
+[touch_start | Triggered by the start of agent clicking on task.]
+touch_start(integer num_detected) {
+    |
+}
+[transaction_result | Triggered when task receives asynchronous data.]
+transaction_result(key id, integer success, string data) {
+    |
+}
+
+; FUNCTIONS
+; Help file > Working with PSPad > Context Files > Clips
+; Format [name |x description]*shortcut
+[llSin | Returns the sine of theta (theta in radians)]
+llSin(float theta)|
+[llCos | Returns the cosine of theta (theta in radians)]
+llCos(float theta)|
+[llTan | Returns the tangent of theta (theta in radians)]
+llTan(float theta)|
+[llAtan2 | Returns the arctangent2 of y, x]
+llAtan2(float y, float x)|
+[llSqrt | Returns the square root of val, or returns 0 and triggers a Math Error for imaginary results]
+llSqrt(float val)|
+[llPow | Returns the base raised to the power exponent, or returns 0 and triggers Math Error for imaginary results]
+llPow(float base, float exponent)|
+[llAbs | Returns the positive version of val]
+llAbs(integer val)|
+[llFabs | Returns the positive version of val]
+llFabs(float val)|
+[llFrand | Returns a pseudo random number in the range [0,mag) or (mag,0]]
+llFrand(float mag)|
+[llFloor | Returns largest integer value <= val]
+llFloor(float val)|
+[llCeil | Returns smallest integer value >= val]
+llCeil(float val)|
+[llRound | Returns val rounded to the nearest integer]
+llRound(float val)|
+[llVecMag | Returns the magnitude of v]
+llVecMag(vector v)|
+[llVecNorm | Returns the v normalized]
+llVecNorm(vector v)|
+[llVecDist | Returns the 3D distance between v1 and v2]
+llVecDist(vector v1, vector v2)|
+[llRot2Euler | Returns the Euler representation (roll, pitch, yaw) of q]
+llRot2Euler(rotation q)|
+[llEuler2Rot | Returns the rotation representation of Euler Angles v]
+llEuler2Rot(vector v)|
+[llAxes2Rot | Returns the rotation defined by the coordinate axes]
+llAxes2Rot(vector fwd, vector left, vector up)|
+[llRot2Fwd | Returns the forward vector defined by q]
+llRot2Fwd(rotation q)|
+[llRot2Left | Returns the left vector defined by q]
+llRot2Left(rotation q)|
+[llRot2Up | Returns the up vector defined by q]
+llRot2Up(rotation q)|
+[llRotBetween | Returns the rotation to rotate v1 to v2]
+llRotBetween(vector v1, vector v2)|
+[llWhisper | Whispers the text of msg on channel]
+llWhisper(integer channel, string msg)|
+[llSay | Says the text of msg on channel]
+llSay(integer channel, string msg)|
+[llShout | Shouts the text of msg on channel]
+llShout(integer channel, string msg)|
+[llListen | Sets a callback for msg on channel from name and id (name, id, and/or msg can be empty) and returns an identifier that can be used to deactivate or remove the listen]
+llListen(integer channel, string name, key id, string msg)|
+[llListenControl | Makes a listen event callback active or inactive]
+llListenControl(integer number, integer active)|
+[llListenRemove | Removes listen event callback number]
+llListenRemove(integer number)|
+[llSensor | Performs a single scan for name and id with type (AGENT, ACTIVE, PASSIVE, and/or SCRIPTED) within range meters and arc radians of forward vector (name, id, and/or keytype can be empty or 0)]
+llSensor(string name, key id, integer type, float range, float arc)|
+[llSensorRepeat | Sets a callback for name and id with type (AGENT, ACTIVE, PASSIVE, and/or SCRIPTED) within range meters and arc radians of forward vector (name, id, and/or keytype can be empty or 0) and repeats every rate seconds]
+llSensorRepeat(string name, key id, integer type, float range, float arc, float rate)|
+[llSensorRemove | Removes the sensor setup by llSensorRepeat]
+llSensorRemove()|
+[llDetectedName | Returns the name of detected object number (returns empty string if number is not a valid sensed object)]
+llDetectedName(integer number)|
+[llDetectedKey | Returns the key of detected object number (returns empty key if number is not a valid sensed object)]
+llDetectedKey(integer number)|
+[llDetectedOwner | Returns the key of detected object's owner (returns empty key if number is not a valid sensed object)]
+llDetectedOwner(integer number)|
+[llDetectedType | Returns the type (AGENT, ACTIVE, PASSIVE, SCRIPTED) of detected object (returns 0 if number is not a valid sensed object)]
+llDetectedType(integer number)|
+[llDetectedPos | Returns the position of detected object number (returns <0,0,0> if number is not a valid sensed object)]
+llDetectedPos(integer number)|
+[llDetectedVel | Returns the velocity of detected object number (returns <0,0,0> if number is not a valid sensed object)]
+llDetectedVel(integer number)|
+[llDetectedGrab | Returns the grab offset of the user touching object (returns <0,0,0> if number is not a valid sensed object)]
+llDetectedGrab(integer number)|
+[llDetectedRot | Returns the rotation of detected object number (returns <0,0,0,1> if number is not a valid sensed object)]
+llDetectedRot(integer number)|
+[llDetectedGroup | Returns TRUE if detected object is part of same group as owner]
+llDetectedGroup(integer number)|
+[llDetectedLinkNumber | Returns the link position of the triggered event for touches and collisions only]
+llDetectedLinkNumber(integer number)|
+[llDie | Deletes the object]
+llDie()|
+[llGround | Returns the ground height below the object position + offset]
+llGround(vector offset)|
+[llCloud | (DEPRECATED) It always returns 0.0 now.Returns the cloud density at the object position + offset.]
+llCloud(vector offset)|
+[llWind | Returns the wind velocity at the object position + offset]
+llWind(vector offset)|
+[llSetStatus | Sets status (STATUS_PHYSICS, STATUS_PHANTOM, STATUS_BLOCK_GRAB, STATUS_ROTATE_X, STATUS_ROTATE_Y, and/or STATUS_ROTATE_Z) to value]
+llSetStatus(integer status, integer value)|
+[llGetStatus | Returns value of status (STATUS_PHYSICS, STATUS_PHANTOM, STATUS_BLOCK_GRAB, STATUS_ROTATE_X, STATUS_ROTATE_Y, and/or STATUS_ROTATE_Z)]
+llGetStatus(integer status)|
+[llSetScale | Sets the scale of the prim]
+llSetScale(vector scale)|
+[llGetScale | Returns the scale of the prim]
+llGetScale()|
+[llSetColor | Sets the color on face of the prim]
+llSetColor(vector color, integer face)|
+[llGetAlpha | Returns the alpha of face]
+llGetAlpha(integer face)|
+[llSetAlpha | Sets the alpha on face]
+llSetAlpha(float alpha, integer face)|
+[llGetColor | Returns the color on face]
+llGetColor(integer face)|
+[llSetTexture | Sets the texture of face or ALL_SIDES]
+llSetTexture(string texture, integer face)|
+[llScaleTexture | Sets the texture u & v scales for the chosen face or ALL_SIDES]
+llScaleTexture(float u, float v, integer face)|
+[llOffsetTexture | Sets the texture u  & v offsets for the chosen face or ALL_SIDES]
+llOffsetTexture(float u, float v, integer face)|
+[llRotateTexture | Sets the texture rotation for the chosen face]
+llRotateTexture(float angle, integer face)|
+[llGetTexture | Returns a string that is the texture on face (the inventory name if it is a texture in the prim's inventory, otherwise the key)]
+llGetTexture(integer face)|
+[llSetPos | Moves the object or prim towards pos without using physics (if the script isn't physical)]
+llSetPos(vector pos)|
+[llGetPos | Returns the position of the task in region coordinates]
+llGetPos()|
+[llGetLocalPos | Returns the position relative to the root]
+llGetLocalPos()|
+[llSetRot | Sets the rotation]
+llSetRot(rotation rot)|
+[llGetRot | Returns the rotation relative to the region's axes]
+llGetRot()|
+[llGetLocalRot | Returns the rotation local to the root]
+llGetLocalRot()|
+[llSetForce | Applies force to the object (if the script is physical), in local coords if local == TRUE]
+llSetForce(vector force, integer local)|
+[llGetForce | Returns the force (if the script is physical)]
+llGetForce()|
+[llTarget | Sets positions within range of position as a target and return an ID for the target]
+llTarget(vector position, float range)|
+[llTargetRemove | Removes positional target number registered with llTarget]
+llTargetRemove(integer number)|
+[llRotTarget | Set rotations with error of rot as a rotational target and return an ID for the rotational target]
+llRotTarget(rotation rot, float error)|
+[llRotTargetRemove | Removes rotational target number registered with llRotTarget]
+llRotTargetRemove(integer number)|
+[llMoveToTarget | Critically damps to target in tau seconds (if the script is physical)]
+llMoveToTarget(vector target, float tau)|
+[llStopMoveToTarget | Stops critically damped motion]
+llStopMoveToTarget()|
+[llApplyImpulse | Applies impulse to object (if the script is physical), in local coords if local == TRUE]
+llApplyImpulse(vector force, integer local)|
+[llApplyRotationalImpulse | Applies rotational impulse to object (if the script is physical), in local coords if local == TRUE]
+llApplyRotationalImpulse(vector force, integer local)|
+[llSetTorque | Sets the torque of object (if the script is physical), in local coords if local == TRUE]
+llSetTorque(vector torque, integer local)|
+[llGetTorque | Returns the torque (if the script is physical)]
+llGetTorque()|
+[llSetForceAndTorque | Sets the force and torque of object (if the script is physical), in local coords if local == TRUE]
+llSetForceAndTorque(vector force, vector torque, integer local)|
+[llGetVel | Returns the velocity of the object]
+llGetVel()|
+[llGetAccel | Returns the acceleration of the object relative to the region's axes]
+llGetAccel()|
+[llGetOmega | Returns the rotation velocity in radians per second]
+llGetOmega()|
+[llGetTimeOfDay | Returns the time in seconds since [CURRENT_GRID] server midnight or since region up-time, whichever is smaller]
+llGetTimeOfDay()|
+[llGetWallclock | Returns the time in seconds since midnight California Pacific time (PST/PDT)]
+llGetWallclock()|
+[llGetTime | Returns the time in seconds since the last region reset, script reset, or call to either llResetTime or llGetAndResetTime]
+llGetTime()|
+[llResetTime | Sets the script timer to zero]
+llResetTime()|
+[llGetAndResetTime | Returns the script time in seconds and then resets the script timer to zero]
+llGetAndResetTime()|
+[llSound | (DEPRECATED) Use llPlaySound / llLoopSound / llSetSoundQueueing.Plays sound at volume and whether it should loop or not.]
+llSound(string sound, float volume, integer queue, integer loop)|
+[llPlaySound | Plays attached sound once at volume (0.0 - 1.0)]
+llPlaySound(string sound, float volume)|
+[llLoopSound | Plays attached sound looping indefinitely at volume (0.0 - 1.0)]
+llLoopSound(string sound, float volume)|
+[llLoopSoundMaster | Plays attached sound looping at volume (0.0 - 1.0), declares it a sync master]
+llLoopSoundMaster(string sound, float volume)|
+[llLoopSoundSlave | Plays attached sound looping at volume (0.0 - 1.0), synced to most audible sync master]
+llLoopSoundSlave(string sound, float volume)|
+[llPlaySoundSlave | Plays attached sound once at volume (0.0 - 1.0), synced to next loop of most audible sync master]
+llPlaySoundSlave(string sound, float volume)|
+[llTriggerSound | Plays sound at volume (0.0 - 1.0), centered at but not attached to object]
+llTriggerSound(string sound, float volume)|
+[llStopSound | Stops currently attached sound]
+llStopSound()|
+[llPreloadSound | Preloads a sound on viewers within range]
+llPreloadSound(string sound)|
+[llGetSubString | Returns the indicated substring]
+llGetSubString(string src, integer start, integer end)|
+[llDeleteSubString | Removes the indicated substring and returns the result]
+llDeleteSubString(string src, integer start, integer end)|
+[llInsertString | Returns a destination string dst with the string src inserted starting at position pos]
+llInsertString(string dst, integer position, string src)|
+[llToUpper | Returns a string that is src with all upper-case characters]
+llToUpper(string src)|
+[llToLower | Returns a string that is src with all lower-case characters]
+llToLower(string src)|
+[llGiveMoney | Transfers amount of L$ from script owner to destination]
+llGiveMoney(key destination, integer amount)|
+[llMakeExplosion | (DEPRECATED) Makes a round explosion of particles]
+llMakeExplosion(integer particles, float scale, float vel, float lifetime, float arc, string texture, vector offset)|
+[llMakeFountain | (DEPRECATED) Makes a fountain of particles]
+llMakeFountain(integer particles, float scale, float vel, float lifetime, float arc, integer bounce, string texture, vector offset, float bounce_offset)|
+[llMakeSmoke | (DEPRECATED) Makes smoke like particles]
+llMakeSmoke(integer particles, float scale, float vel, float lifetime, float arc, string texture, vector offset)|
+[llMakeFire | (DEPRECATED) Makes fire like particles]
+llMakeFire(integer particles, float scale, float vel, float lifetime, float arc, string texture, vector offset)|
+[llRezObject | Instantiates owner's inventory object at pos with velocity vel and rotation rot with start parameter param]
+llRezObject(string inventory, vector pos, vector vel, rotation rot, integer param)|
+[llLookAt | Causes object to point its up axis (positive z) towards target, while keeping its forward axis (positive x) below the horizon]
+llLookAt(vector target, float strength, float damping)|
+[llLinkLookAt | Causes a linked prim to point its up axis (positive z) towards target, while keeping its forward axis (positive x) below the horizon]
+llLinkLookAt(integer link, vector target, float strength, float damping)|
+[llStopLookAt | Stops causing object to point at a target]
+llStopLookAt()|
+[llSetTimerEvent | Causes the timer event to be triggered a maximum of once every sec seconds]
+llSetTimerEvent(float sec)|
+[llSleep | Puts the script to sleep for sec seconds]
+llSleep(float sec)|
+[llGetMass | Returns the mass of object that the script is attached to]
+llGetMass()|
+[llCollisionFilter | Sets the collision filter, exclusively or inclusively. If accept == TRUE, only accept collisions with objects name and id (either is optional), otherwise with objects not name or id.]
+llCollisionFilter(string name, key id, integer accept)|
+[llTakeControls | Allows for intercepting keyboard and mouse clicks from the agent the script has permissions for]
+llTakeControls(integer controls, integer accept, integer pass_on)|
+[llReleaseControls | Stops taking inputs that were taken with llTakeControls]
+llReleaseControls()|
+[llAttachToAvatar | Attaches the object to the avatar who has granted permission to the script]
+llAttachToAvatar(integer attach_point)|
+[llDetachFromAvatar | Detaches object from avatar]
+llDetachFromAvatar()|
+[llTakeCamera | (DEPRECATED) Use llSetCameraParams instead.Moves avatar's viewpoint to task.]
+llTakeCamera(key avatar)|
+[llReleaseCamera | (DEPRECATED) Use llClearCameraParams instead.Returns camera to agent avatar.]
+llReleaseCamera(key avatar)|
+[llGetOwner | Returns the object owner's UUID]
+llGetOwner()|
+[llInstantMessage | Sends the specified string as an Instant Message to the user]
+llInstantMessage(key user, string message)|
+[llEmail | Sends an email to address with the subject and message]
+llEmail(string address, string subject, string message)|
+[llGetNextEmail | Gets the next waiting email that comes from address, with specified subject]
+llGetNextEmail(string address, string subject)|
+[llGetKey | Returns the key of the prim the script is attached to]
+llGetKey()|
+[llSetBuoyancy | Sets the buoyancy of the task or object (0 is disabled, < 1.0 sinks, 1.0 floats, > 1.0 rises)]
+llSetBuoyancy(float buoyancy)|
+[llSetHoverHeight | Critically damps to a height above the ground (or water) in tau seconds]
+llSetHoverHeight(float height, integer water, float tau)|
+[llStopHover | Stops hovering to a height]
+llStopHover()|
+[llMinEventDelay | Sets the minimum time between events being handled]
+llMinEventDelay(float delay)|
+[llSoundPreload | (DEPRECATED) Use llPreloadSound.Preloads a sound on viewers within range]
+llSoundPreload(string sound)|
+[llRotLookAt | Causes object to point its forward axis towards target]
+llRotLookAt(rotation target, float strength, float damping)|
+[llLinkRotLookAt | Causes linked prim to point its forward axis towards target]
+llLinkRotLookAt(integer link, rotation target, float strength, float damping)|
+[llStringLength | Returns the length of string]
+llStringLength(string str)|
+[llStartAnimation | Starts animation anim for agent that granted PERMISSION_TRIGGER_ANIMATION if the permission has not been revoked]
+llStartAnimation(string anim)|
+[llStopAnimation | Stops animation anim for agent that granted permission]
+llStopAnimation(string anim)|
+[llPointAt | Makes agent that owns object point at pos]
+llPointAt(vector pos)|
+[llStopPointAt | Stops pointing agent that owns object]
+llStopPointAt()|
+[llTargetOmega | Rotates the object around axis at spinrate with strength gain]
+llTargetOmega(vector axis, float spinrate, float gain)|
+[llGetStartParameter | Returns an integer that is the script start/rez parameter]
+llGetStartParameter()|
+[llGodLikeRezObject | Rezzes directly off of UUID if owner is in God Mode]
+llGodLikeRezObject(key inventory, vector pos)|
+[llRequestPermissions | Asks the agent for permission to run certain classes of functions]
+llRequestPermissions(key agent, integer perm)|
+[llGetPermissionsKey | Returns the key of the avatar that last granted permissions to the script]
+llGetPermissionsKey()|
+[llGetPermissions | Returns an integer bitfield with the permissions that have been granted]
+llGetPermissions()|
+[llGetLinkNumber | Returns the link number of the prim containing the script (0 means not linked, 1 the prim is the root, 2 the prim is the first child, etc)]
+llGetLinkNumber()|
+[llSetLinkColor | Sets face to color if a task exists in the link chain at linknumber]
+llSetLinkColor(integer linknumber, vector color, integer face)|
+[llCreateLink | Attempts to link the script's object with the target (requires that PERMISSION_CHANGE_LINKS be granted). If parent == TRUE, then the script's object becomes the root.]
+llCreateLink(key target, integer parent)|
+[llBreakLink | Delinks the prim with the given link number in a linked object set (requires that PERMISSION_CHANGE_LINKS be granted)]
+llBreakLink(integer linknum)|
+[llBreakAllLinks | Delinks all prims in the link set (requires that PERMISSION_CHANGE_LINKS be granted)]
+llBreakAllLinks()|
+[llGetLinkKey | Returns the key of the linked prim linknumber]
+llGetLinkKey(integer linknumber)|
+[llGetLinkName | Returns the name of linknumber in a link set]
+llGetLinkName(integer linknumber)|
+[llGetInventoryNumber | Returns the number of items of a given type (INVENTORY_* flag) in the prim's inventory]
+llGetInventoryNumber(integer type)|
+[llGetInventoryName | Returns the name of the inventory item number of a given type]
+llGetInventoryName(integer type, integer number)|
+[llSetScriptState | Sets the running state of the specified script]
+llSetScriptState(string name, integer run)|
+[llGetEnergy | Returns how much energy is in the object as a percentage of maximum]
+llGetEnergy()|
+[llGiveInventory | Gives inventory to destination.Sleeps script for 2 seconds if destination is an avatar.]
+llGiveInventory(key destination, string inventory)|
+[llRemoveInventory | Removes the named inventory item]
+llRemoveInventory(string item)|
+[llSetText | Displays text that hovers over the prim with specific color and translucency specified with alpha]
+llSetText(string text, vector color, float alpha)|
+[llWater | Returns the water height below the object position + offset]
+llWater(vector offset)|
+[llPassTouches | If pass == TRUE, touches are passed from children on to parents]
+llPassTouches(integer pass)|
+[llRequestAgentData | Requests data about agent id. When data is available the dataserver event will be raised.]
+llRequestAgentData(key id, integer data)|
+[llRequestInventoryData | Requests data from object's inventory object. When data is available the dataserver event will be raised.]
+llRequestInventoryData(string name)|
+[llSetDamage | Sets the amount of damage that will be done when this object hits an avatar]
+llSetDamage(float damage)|
+[llTeleportAgentHome | Teleports avatar on the owner's land to their home location without any warning]
+llTeleportAgentHome(key id)|
+[llModifyLand | Modifies land using the specified action on the specified brush size of land]
+llModifyLand(integer action, integer brush)|
+[llCollisionSound | Suppresses default collision sounds, replaces default impact sounds with impact_sound at the volume impact_volume]
+llCollisionSound(string impact_sound, float impact_volume)|
+[llCollisionSprite | Suppresses default collision sprites, replaces default impact sprite with impact_sprite (use an empty string to just suppress)]
+llCollisionSprite(string impact_sprite)|
+[llGetAnimation | Returns the name of the currently playing locomotion animation for avatar id]
+llGetAnimation(key id)|
+[llResetScript | Resets the script]
+llResetScript()|
+[llMessageLinked | Allows scripts in the same object to communicate. Triggers a link_message event with the same parameters num, str, and id in all scripts in the prim(s) described by linknum.]
+llMessageLinked(integer linknum, integer num, string str, key id)|
+[llPushObject | Applies impulse and ang_impulse to object id]
+llPushObject(key id, vector impulse, vector ang_impulse, integer local)|
+[llPassCollisions | If pass == TRUE, collisions are passed from children on to parents (default is FALSE)]
+llPassCollisions(integer pass)|
+[llGetScriptName | Returns the name of the script that this function is used in]
+llGetScriptName()|
+[llGetNumberOfSides | Returns the number of faces (or sides) of the prim]
+llGetNumberOfSides()|
+[llAxisAngle2Rot | Returns the rotation that is a generated angle about axis]
+llAxisAngle2Rot(vector axis, float angle)|
+[llRot2Axis | Returns the rotation axis represented by rot]
+llRot2Axis(rotation rot)|
+[llRot2Angle | Returns the rotation angle represented by rot]
+llRot2Angle(rotation rot)|
+[llAcos | Returns the arccosine in radians of val]
+llAcos(float val)|
+[llAsin | Returns the arcsine in radians of val]
+llAsin(float val)|
+[llAngleBetween | Returns angle between rotation a and b]
+llAngleBetween(rotation a, rotation b)|
+[llGetInventoryKey | Returns the key that is the UUID of the inventory name]
+llGetInventoryKey(string name)|
+[llAllowInventoryDrop | If add == TRUE, users without modify permissions can still drop inventory items onto a prim]
+llAllowInventoryDrop(integer add)|
+[llGetSunDirection | Returns a normalized vector of the direction of the sun in the region]
+llGetSunDirection()|
+[llGetTextureOffset | Returns the texture offset of face in the x and y components of a vector]
+llGetTextureOffset(integer face)|
+[llGetTextureScale | Returns the texture scale of side in the x and y components of a vector]
+llGetTextureScale(integer side)|
+[llGetTextureRot | Returns the texture rotation of side]
+llGetTextureRot(integer side)|
+[llSubStringIndex | Returns an integer that is the index in source where pattern first appears.(Returns -1 if not found.)]
+llSubStringIndex(string source, string pattern)|
+[llGetOwnerKey | Returns the owner of object id]
+llGetOwnerKey(key id)|
+[llGetCenterOfMass | Returns the prim's center of mass (unless called from the root prim, where it returns the object's center of mass)]
+llGetCenterOfMass()|
+[llListSort | Sorts the list into blocks of stride, in ascending order if ascending == TRUE.The sort order is affected by type.]
+llListSort(list src, integer stride, integer ascending)|
+[llGetListLength | Returns the number of elements in the list]
+llGetListLength(list src)|
+[llList2Integer | Copies the integer at index in the list]
+llList2Integer(list src, integer index)|
+[llList2Float | Copies the float at index in the list]
+llList2Float(list src, integer index)|
+[llList2String | Copies the string at index in the list]
+llList2String(list src, integer index)|
+[llList2Key | Copies the key at index in the list]
+llList2Key(list src, integer index)|
+[llList2Vector | Copies the vector at index in the list]
+llList2Vector(list src, integer index)|
+[llList2Rot | Copies the rotation at index in the list]
+llList2Rot(list src, integer index)|
+[llList2List | Copies the slice of the list from start to end]
+llList2List(list src, integer start, integer end)|
+[llDeleteSubList | Removes the slice from start to end and returns the remainder of the list]
+llDeleteSubList(list src, integer start, integer end)|
+[llGetListEntryType | Returns the type of the index entry in the list(TYPE_INTEGER, TYPE_FLOAT, TYPE_STRING, TYPE_KEY, TYPE_VECTOR, TYPE_ROTATION, or TYPE_INVALID if index is off list)]
+llGetListEntryType(list src, integer index)|
+[llList2CSV | Creates a string of comma separated values from list]
+llList2CSV(list src)|
+[llCSV2List | Creates a list from a string of comma separated values]
+llCSV2List(string src)|
+[llListRandomize | Returns a randomized list of blocks of size stride]
+llListRandomize(list src, integer stride)|
+[llList2ListStrided | Copies the strided slice of the list from start to end]
+llList2ListStrided(list src, integer start, integer end, integer stride)|
+[llGetRegionCorner | Returns a vector in meters that is the global location of the south-west corner of the region which the object is in]
+llGetRegionCorner()|
+[llListInsertList | Returns a list that contains all the elements from dest but with the elements from src inserted at position start]
+llListInsertList(list dest, list src, integer start)|
+[llListFindList | Returns the index of the first instance of test in src.(Returns -1 if not found.)]
+llListFindList(list src, list test)|
+[llGetObjectName | Returns the name of the prim which the script is attached to]
+llGetObjectName()|
+[llSetObjectName | Sets the prim's name to the name parameter]
+llSetObjectName(string name)|
+[llGetDate | Returns the current date in the UTC time zone in the format YYYY-MM-DD]
+llGetDate()|
+[llEdgeOfWorld | Checks to see whether the border hit by dir from pos is the edge of the world (has no neighboring region)]
+llEdgeOfWorld(vector pos, vector dir)|
+[llGetAgentInfo | Returns an integer bitfield containing the agent information about id.Returns AGENT_FLYING, AGENT_ATTACHMENTS, AGENT_SCRIPTED, AGENT_SITTING, AGENT_ON_OBJECT, AGENT_MOUSELOOK, AGENT_AWAY, AGENT_BUSY, AGENT_TYPING, AGENT_CROUCHING, AGENT_ALWAYS_RUN, AGENT_WALKING and/or AGENT_IN_AIR.]
+llGetAgentInfo(key id)|
+[llAdjustSoundVolume | Adjusts volume of attached sound (0.0 - 1.0)]
+llAdjustSoundVolume(float volume)|
+[llSetSoundQueueing | Sets whether attached sounds wait for the current sound to finish (If queue == TRUE then queuing is enabled, if FALSE queuing is disabled [default])]
+llSetSoundQueueing(integer queue)|
+[llSetSoundRadius | Establishes a hard cut-off radius for audibility of scripted sounds (both attached and triggered)]
+llSetSoundRadius(float radius)|
+[llKey2Name | Returns the name of the prim or avatar specified by id.(The id must be a valid rezzed prim or avatar key in the current simulator, otherwise an empty string is returned.)]
+llKey2Name(key id)|
+[llSetTextureAnim | Animates the texture on the specified face/faces]
+llSetTextureAnim(integer mode, integer face, integer sizex, integer sizey, float start, float length, float rate)|
+[llTriggerSoundLimited | Plays sound at volume (0.0 - 1.0), centered at but not attached to object, limited to the box defined by vectors top_north_east and bottom_south_west]
+llTriggerSoundLimited(string sound, float volume, vector top_north_east, vector bottom_south_west)|
+[llEjectFromLand | Ejects avatar from the parcel]
+llEjectFromLand(key avatar)|
+[llParseString2List | Breaks src into a list, discarding separators, keeping spacers(separators and spacers must be lists of strings, maximum of 8 each)]
+llParseString2List(string src, list separators, list spacers)|
+[llOverMyLand | Returns TRUE if id is over land owned by the script owner, otherwise FALSE]
+llOverMyLand(key id)|
+[llGetLandOwnerAt | Returns the key of the land owner, returns NULL_KEY if public]
+llGetLandOwnerAt(vector pos)|
+[llGetNotecardLine | Returns line line of notecard name via the dataserver event]
+llGetNotecardLine(string name, integer line)|
+[llGetAgentSize | If the avatar is in the same region, returns the size of the bounding box of the requested avatar by id, otherwise returns ZERO_VECTOR]
+llGetAgentSize(key id)|
+[llSameGroup | Returns TRUE if avatar id is in the same region and has the same active group, otherwise FALSE]
+llSameGroup(key id)|
+[llUnSit | If avatar identified by id is sitting on the object the script is attached to or is over land owned by the object's owner, the avatar is forced to stand up]
+llUnSit(key id)|
+[llGroundSlope | Returns the ground slope below the object position + offset]
+llGroundSlope(vector offset)|
+[llGroundNormal | Returns the ground normal below the object position + offset]
+llGroundNormal(vector offset)|
+[llGroundContour | Returns the ground contour direction below the object position + offset]
+llGroundContour(vector offset)|
+[llGetAttached | Returns the object's attachment point, or 0 if not attached]
+llGetAttached()|
+[llGetFreeMemory | Returns the number of free bytes of memory the script can use]
+llGetFreeMemory()|
+[llGetRegionName | Returns the current region name]
+llGetRegionName()|
+[llGetRegionTimeDilation | Returns the current time dilation as a float between 0.0 (full dilation) and 1.0 (no dilation)]
+llGetRegionTimeDilation()|
+[llGetRegionFPS | Returns the mean region frames per second]
+llGetRegionFPS()|
+[llParticleSystem | Creates a particle system based on rules. An empty list removes the particle system.List format is [ rule1, data1, rule2, data2 ... rulen, datan ].]
+llParticleSystem(list rules)|
+[llGroundRepel | Critically damps to height if within height*0.5 of level (either above ground level, or above the higher of land and water if water == TRUE)]
+llGroundRepel(float height, integer water, float tau)|
+[llGiveInventoryList | Gives inventory items to target, creating a new folder to put them in]
+llGiveInventoryList(key target, string folder, list inventory)|
+[llSetVehicleType | Sets the vehicle to one of the default types]
+llSetVehicleType(integer type)|
+[llSetVehicleFloatParam | Sets the specified vehicle float parameter]
+llSetVehicleFloatParam(integer param, float value)|
+[llSetVehicleVectorParam | Sets the specified vehicle vector parameter]
+llSetVehicleVectorParam(integer param, vector vec)|
+[llSetVehicleRotationParam | Sets the specified vehicle rotation parameter]
+llSetVehicleRotationParam(integer param, rotation rot)|
+[llSetVehicleFlags | Sets the enabled bits in 'flags']
+llSetVehicleFlags(integer flags)|
+[llRemoveVehicleFlags | Removes the enabled bits in 'flags']
+llRemoveVehicleFlags(integer flags)|
+[llSitTarget | Sets the sit location for the prim. If offset == <0,0,0> then the sit target is removed.]
+llSitTarget(vector offset, rotation rot)|
+[llAvatarOnSitTarget | If an avatar is seated on the sit target, returns the avatar's key, otherwise NULL_KEY]
+llAvatarOnSitTarget()|
+[llAddToLandPassList | Adds avatar to the land pass list for hours, or indefinitely if hours is 0]
+llAddToLandPassList(key avatar, float hours)|
+[llSetTouchText | Displays text rather than the default 'Touch' in the pie menu]
+llSetTouchText(string text)|
+[llSetSitText | Displays text rather than the default 'Sit Here' in the pie menu]
+llSetSitText(string text)|
+[llSetCameraEyeOffset | Sets the camera eye offset for avatars that sit on the object]
+llSetCameraEyeOffset(vector offset)|
+[llSetCameraAtOffset | Sets the point the camera is looking at to offset for avatars that sit on the object]
+llSetCameraAtOffset(vector offset)|
+[llDumpList2String | Returns the list in a single string, using separator between the entries]
+llDumpList2String(list src, string separator)|
+[llScriptDanger | Returns TRUE if pos is over public land, sandbox land, land that doesn't allow everyone to edit and build, or land that doesn't allow outside scripts]
+llScriptDanger(vector pos)|
+[llDialog | Shows a dialog box on the avatar's screen with a message and up to 12 buttons.If a button is pressed, the avatar says the text of the button label on chat_channel.]
+llDialog(key avatar, string message, list buttons, integer chat_channel)|
+[llVolumeDetect | If detect = TRUE, object works much like Phantom, but triggers collision_start and collision_end events when other objects start and stop interpenetrating.Must be applied to the root prim.]
+llVolumeDetect(integer detect)|
+[llResetOtherScript | Resets script name]
+llResetOtherScript(string name)|
+[llGetScriptState | Returns TRUE if the script name is running]
+llGetScriptState(string name)|
+[llRemoteLoadScript | (DEPRECATED) Use llRemoteLoadScriptPin instead.]
+llRemoteLoadScript(key target, string name, integer running, integer start_param)|
+[llSetRemoteScriptAccessPin | If pin is set to a non-zero number, allows a prim to have scripts remotely loaded via llRemoteLoadScriptPin when it passes in the correct pin. Otherwise, llRemoteLoadScriptPin is ignored.]
+llSetRemoteScriptAccessPin(integer pin)|
+[llRemoteLoadScriptPin | Copies script name onto target, if the owner of this scripted object can modify target and is in the same region, and the matching pin is used.If running == TRUE, starts the script with start_param.]
+llRemoteLoadScriptPin(key target, string name, integer pin, integer running, integer start_param)|
+[llOpenRemoteDataChannel | Creates a channel to listen for XML-RPC calls, and will trigger a remote_data event with channel id once it is available]
+llOpenRemoteDataChannel()|
+[llSendRemoteData | Sends an XML-RPC request to dest through channel with payload of channel (in a string), integer idata and string sdata.Returns a key that is the message_id for the resulting remote_data events.]
+llSendRemoteData(key channel, string dest, integer idata, string sdata)|
+[llRemoteDataReply | Sends an XML-RPC reply to message_id on channel with payload of string sdata and integer idata]
+llRemoteDataReply(key channel, key message_id, string sdata, integer idata)|
+[llCloseRemoteDataChannel | Closes XML-RPC channel]
+llCloseRemoteDataChannel(key channel)|
+[llMD5String | Returns a string of 32 hex characters that is a RSA Data Security, Inc. MD5 Message-Digest Algorithm of src with nonce]
+llMD5String(string src, integer nonce)|
+[llSetPrimitiveParams | Sets the prim's parameters according to rules]
+llSetPrimitiveParams(list rules)|
+[llStringToBase64 | Converts a string to the Base64 representation of the string]
+llStringToBase64(string str)|
+[llBase64ToString | Converts a Base64 string to a conventional string.If the conversion creates any unprintable characters, they are converted to spaces.]
+llBase64ToString(string str)|
+[llXorBase64Strings | (DEPRECATED) Use llXorBase64 instead.Incorrectly performs an exclusive or on two Base64 strings and returns a Base64 string. str2 repeats if it is shorter than str1. Retained for backwards compatability.]
+llXorBase64Strings(string str1, string str2)|
+[llRemoteDataSetRegion | (DEPRECATED) Use http_server instead.If an object using remote data channels changes regions, you must call this function to reregister the remote data channels. This call is not needed if the prim does not change regions.]
+llRemoteDataSetRegion()|
+[llLog10 | Returns the base 10 logarithm of val. Returns zero if val <= 0.]
+llLog10(float val)|
+[llLog | Returns the natural logarithm of val. Returns zero if val <= 0.]
+llLog(float val)|
+[llGetAnimationList | Returns a list of keys of playing animations for avatar described by id]
+llGetAnimationList(key id)|
+[llSetParcelMusicURL | Sets the streaming audio URL for the parcel which the object is on]
+llSetParcelMusicURL(string url)|
+[llGetRootPosition | Returns the position (in region coordinates) of the root prim of the object which the script is attached to]
+llGetRootPosition()|
+[llGetRootRotation | Returns the rotation (relative to the region) of the root prim of the object which the script is attached to]
+llGetRootRotation()|
+[llGetObjectDesc | Returns the description of the prim the script is attached to]
+llGetObjectDesc()|
+[llSetObjectDesc | Sets the prim's description to desc]
+llSetObjectDesc(string desc)|
+[llGetCreator | Returns a key for the creator of the prim]
+llGetCreator()|
+[llGetTimestamp | Returns the timestamp in the UTC time zone in the format: YYYY-MM-DDThh:mm:ss.ff..fZ]
+llGetTimestamp()|
+[llSetLinkAlpha | If a prim exists in the link chain at linknumber, sets face to alpha]
+llSetLinkAlpha(integer linknumber, float alpha, integer face)|
+[llGetNumberOfPrims | Returns the number of prims in a link set the script is attached to]
+llGetNumberOfPrims()|
+[llGetNumberOfNotecardLines | Returns number of lines in notecard name via the dataserver event (cast return value to integer)]
+llGetNumberOfNotecardLines(string name)|
+[llGetBoundingBox | Returns the bounding box around the object (including any linked prims) relative to its root prim, in a list in the format [ (vector) min_corner, (vector) max_corner ]]
+llGetBoundingBox(key object)|
+[llGetGeometricCenter | Returns the geometric center of the linked set the script is attached to]
+llGetGeometricCenter()|
+[llGetPrimitiveParams | Returns the primitive parameters specified in the params list]
+llGetPrimitiveParams(list params)|
+[llIntegerToBase64 | Returns a string that is a Base64 big endian encode of number]
+llIntegerToBase64(integer number)|
+[llBase64ToInteger | Returns an integer that is the str Base64 decoded as a big endian integer]
+llBase64ToInteger(string str)|
+[llGetGMTclock | Returns the time in seconds since midnight GMT]
+llGetGMTclock()|
+[llGetSimulatorHostname | Returns the hostname of the machine which the script is running on (same as string in viewer Help dialog)]
+llGetSimulatorHostname()|
+[llSetLocalRot | Sets the rotation of a child prim relative to the root prim]
+llSetLocalRot(rotation rot)|
+[llParseStringKeepNulls | Breaks src into a list, discarding separators, keeping spacers, keeping any null values generated (separators and spacers must be lists of strings, maximum of 8 each)]
+llParseStringKeepNulls(string src, list separators, list spacers)|
+[llRezAtRoot | Instantiates owner's inventory object rotated to rot with its root at pos, moving at vel, using param as the start parameter]
+llRezAtRoot(string inventory, vector pos, vector vel, rotation rot, integer param)|
+[llGetObjectPermMask | Returns the requested permission mask for the root object the task is attached to]
+llGetObjectPermMask(integer mask)|
+[llSetObjectPermMask | Sets the given permission mask to the new value on the root object the task is attached to (requires God Mode)]
+llSetObjectPermMask(integer mask, integer value)|
+[llGetInventoryPermMask | Returns the requested permission mask for the inventory item]
+llGetInventoryPermMask(string item, integer mask)|
+[llSetInventoryPermMask | Sets the given permission mask to the new value on the inventory item (requires God Mode)]
+llSetInventoryPermMask(string item, integer mask, integer value)|
+[llGetInventoryCreator | Returns a key for the creator of the inventory item]
+llGetInventoryCreator(string item)|
+[llOwnerSay | Says msg to owner only. (Owner must be in the same region.)]
+llOwnerSay(string msg)|
+[llRequestSimulatorData | Requests data about simulator. When data is available the dataserver event will be raised.]
+llRequestSimulatorData(string simulator, integer data)|
+[llForceMouselook | If mouselook is TRUE, any avatar that sits upon the prim will be forced into mouselook mode]
+llForceMouselook(integer mouselook)|
+[llGetObjectMass | Returns the mass of the avatar or object in the region]
+llGetObjectMass(key id)|
+[llListReplaceList | Returns a list that is dest with start through end removed and src inserted at start]
+llListReplaceList(list dest, list src, integer start, integer end)|
+[llLoadURL | Shows a dialog to avatar offering to load the web page at url with a message.If user clicks yes, launches the page in their web browser.]
+llLoadURL(key avatar, string message, string url)|
+[llParcelMediaCommandList | Sends a list of commands, some with arguments, to a parcel to control the playback of movies and other media]
+llParcelMediaCommandList(list command)|
+[llParcelMediaQuery | Returns a list containing results of the sent query]
+llParcelMediaQuery(list query)|
+[llModPow | Returns a raised to the b power, mod c. ( (a**b)%c )b is capped at 0xFFFF (16 bits).]
+llModPow(integer a, integer b, integer c)|
+[llGetInventoryType | Returns the type of the inventory item name]
+llGetInventoryType(string name)|
+[llSetPayPrice | Sets the default amount on the dialog that appears when someone chooses to pay this prim]
+llSetPayPrice(integer price, list quick_pay_buttons)|
+[llGetCameraPos | Returns the current camera position for the agent the task has permissions for]
+llGetCameraPos()|
+[llGetCameraRot | Returns the current camera orientation for the agent the task has permissions for]
+llGetCameraRot()|
+[llSetPrimURL | Updates the URL for the web page shown on the sides of the object]
+llSetPrimURL(string url)|
+[llRefreshPrimURL | (DEPRECATED) Issues a warning "llRefreshPrimURL - not yet supported".Reloads the web page shown on the sides of the object]
+llRefreshPrimURL()|
+[llEscapeURL | Returns an escaped/encoded version of url, replacing spaces with %20 etc.]
+llEscapeURL(string url)|
+[llUnescapeURL | Returns an unescaped/ unencoded version of url, replacing %20 with spaces etc.]
+llUnescapeURL(string url)|
+[llMapDestination | Opens the World Map centered on the region simname with pos highlighted. (NOTE: look_at currently does nothing.)Only works for scripts attached to avatar, or during touch events.]
+llMapDestination(string simname, vector pos, vector look_at)|
+[llAddToLandBanList | Adds avatar to the land ban list for hours, or indefinitely if hours is 0]
+llAddToLandBanList(key avatar, float hours)|
+[llRemoveFromLandPassList | Removes avatar from the land pass list]
+llRemoveFromLandPassList(key avatar)|
+[llRemoveFromLandBanList | Removes avatar from the land ban list]
+llRemoveFromLandBanList(key avatar)|
+[llSetCameraParams | Sets multiple camera parameters at once.List format is [ rule1, data1, rule2, data2 ... rulen, datan ].]
+llSetCameraParams(list rules)|
+[llClearCameraParams | Resets all camera parameters to default values and turns off scripted camera control]
+llClearCameraParams()|
+[llListStatistics | Performs statistical aggregate functions on list src using LIST_STAT_* operations]
+llListStatistics(integer operation, list src)|
+[llGetUnixTime | Returns the number of seconds elapsed since 00:00 hours, Jan 1, 1970 UTC from the system clock]
+llGetUnixTime()|
+[llGetParcelFlags | Returns a mask of the parcel flags (PARCEL_FLAG_*) for the parcel that includes the point pos]
+llGetParcelFlags(vector pos)|
+[llGetRegionFlags | Returns the region flags (REGION_FLAG_*) for the region the object is in]
+llGetRegionFlags()|
+[llXorBase64StringsCorrect | (DEPRECATED) Use llXorBase64 instead.Incorrectly performs an exclusive or on two Base64 strings and returns a Base64 string.str2 repeats if it is shorter than str1. Retained for backwards compatability.]
+llXorBase64StringsCorrect(string str1, string str2)|
+[llHTTPRequest | Sends an HTTP request to the specified url with the body of the request and parameters]
+llHTTPRequest(string url, list parameters, string body)|
+[llResetLandBanList | Removes all Residents from the land ban list]
+llResetLandBanList()|
+[llResetLandPassList | Removes all Residents from the land access/pass list]
+llResetLandPassList()|
+[llGetObjectPrimCount | Returns the total number of prims for an object in the region]
+llGetObjectPrimCount(key object_id)|
+[llGetParcelPrimOwners | Returns a list of all Residents who own objects on the parcel at pos and with individual prim counts.Requires owner-like permissions for the parcel.]
+llGetParcelPrimOwners(vector pos)|
+[llGetParcelPrimCount | Returns the number of prims on the parcel at pos of the given category.Categories: PARCEL_COUNT_TOTAL, _OWNER, _GROUP, _OTHER, _SELECTED, _TEMP.]
+llGetParcelPrimCount(vector pos, integer category, integer sim_wide)|
+[llGetParcelMaxPrims | Returns the maximum number of prims allowed on the parcel at pos]
+llGetParcelMaxPrims(vector pos, integer sim_wide)|
+[llGetParcelDetails | Returns the parcel details specified in params for the parcel at pos.Params is one or more of: PARCEL_DETAILS_NAME, _DESC, _OWNER, _GROUP, _AREA, _ID, _SEE_AVATARS.]
+llGetParcelDetails(vector pos, list params)|
+[llSetLinkPrimitiveParams | Sets primitive parameters for linknumber based on rules]
+llSetLinkPrimitiveParams(integer linknumber, list rules)|
+[llSetLinkTexture | Sets the texture of face for a task that exists in the link chain at linknumber]
+llSetLinkTexture(integer linknumber, string texture, integer face)|
+[llStringTrim | Trims the leading and/or trailing white spaces from a string.trim_type can be STRING_TRIM, STRING_TRIM_HEAD or STRING_TRIM_TAIL.]
+llStringTrim(string src, integer trim_type)|
+[llRegionSay | Broadcasts msg on channel (not 0) that can be heard anywhere in the region by a script listening on channel]
+llRegionSay(integer channel, string msg)|
+[llGetObjectDetails | Returns the object details specified in params for the object with key id.Params are OBJECT_NAME, _DESC, _POS, _ROT, _VELOCITY, _OWNER, _GROUP, _CREATOR.]
+llGetObjectDetails(key id, list params)|
+[llSetClickAction | Sets the action performed when a prim is clicked upon]
+llSetClickAction(integer action)|
+[llGetRegionAgentCount | Returns the number of avatars in the region]
+llGetRegionAgentCount()|
+[llTextBox | Shows a window on the avatar's screen with the message.It contains a text box for input, and if entered that text is chatted on chat_channel.]
+llTextBox(key avatar, string message, integer chat_channel)|
+[llGetAgentLanguage | Returns the language code of the preferred interface language of the avatar]
+llGetAgentLanguage(key avatar)|
+[llDetectedTouchUV | Returns the u and v coordinates in the first two components of a vector, for the texture coordinates where the prim number was touched in a triggered touch event]
+llDetectedTouchUV(integer number)|
+[llDetectedTouchFace | Returns the index of the face where the avatar number clicked in a triggered touch event]
+llDetectedTouchFace(integer number)|
+[llDetectedTouchPos | Returns the position where the object number was touched in a triggered touch event]
+llDetectedTouchPos(integer number)|
+[llDetectedTouchNormal | Returns the surface normal for a triggered touch event]
+llDetectedTouchNormal(integer number)|
+[llDetectedTouchBinormal | Returns the surface binormal for a triggered touch event]
+llDetectedTouchBinormal(integer number)|
+[llDetectedTouchST | Returns the s and t coordinates in the first two components of a vector, for the surface coordinates where the prim was touched in a triggered touch event]
+llDetectedTouchST(integer number)|
+[llSHA1String | Returns a string of 40 hex characters that is the SHA1 security Hash of src]
+llSHA1String(string src)|
+[llGetFreeURLs | Returns the number of available URLs for the current script]
+llGetFreeURLs()|
+[llRequestURL | Requests one HTTP:// url for use by this object.An http_request event is triggered with the results.]
+llRequestURL()|
+[llRequestSecureURL | Requests one HTTPS:// (SSL) url for use by this object.An http_request event is triggered with the results.]
+llRequestSecureURL()|
+[llReleaseURL | Releases the specified URL, it will no longer be usable]
+llReleaseURL(string url)|
+[llHTTPResponse | Responds to request_id with status and body]
+llHTTPResponse(key request_id, integer status, string body)|
+[llGetHTTPHeader | Returns the value for header for request_id]
+llGetHTTPHeader(key request_id, string header)|
+[llSetPrimMediaParams | Sets the media params for a particular face on an object. If media is not already on this object, add it.List is a set of name/value pairs in no particular order. Params not specified are unchanged, or if new media is added then set to the default specified.]
+llSetPrimMediaParams(integer face, list params)|
+[llGetPrimMediaParams | Returns the media params for a particular face on an object, given the desired list of names, in the order requested.(Returns an empty list if no media exists on the face.)]
+llGetPrimMediaParams(integer face, list params)|
+[llClearPrimMedia | Clears (deletes) the media and all params from the given face]
+llClearPrimMedia(integer face)|
+[llSetLinkPrimitiveParamsFast | Set primitive parameters for linknumber based on rules]
+llSetLinkPrimitiveParamsFast(integer linknumber, list rules)|
+[llGetLinkPrimitiveParams | Get primitive parameters for linknumber based on rules]
+llGetLinkPrimitiveParams(integer linknumber, list rules)|
+[llLinkParticleSystem | Creates a particle system based on rules. Empty list removes particle system from object.List format is [ rule1, data1, rule2, data2 ... rulen, datan ].]
+llLinkParticleSystem(integer linknumber, list rules)|
+[llSetLinkTextureAnim | Animate the texture on the specified prim's face/faces]
+llSetLinkTextureAnim(integer link, integer mode, integer face, integer sizex, integer sizey, float start, float length, float rate)|
+[llGetLinkNumberOfSides | Returns the number of sides of the specified linked prim]
+llGetLinkNumberOfSides(integer link)|
+[llGetUsername | Returns the single-word username of an avatar, iff the avatar is in the current region, otherwise the empty string]
+llGetUsername(key id)|
+[llRequestUsername | Requests single-word username of an avatar. When data is available the dataserver event will be raised.]
+llRequestUsername(key id)|
+[llGetDisplayName | Returns the name of an avatar, iff the avatar is in the current simulator, and the name has been cached, otherwise the same as llGetUsername. Use llRequestDisplayName if you absolutely must have the display name.]
+llGetDisplayName(key id)|
+[llRequestDisplayName | Requests name of an avatar. When data is available the dataserver event will be raised.]
+llRequestDisplayName(key id)|
+[llGetEnv | Returns a string with the requested data about the region]
+llGetEnv(string name)|
+[llRegionSayTo | Sends msg on channel (not DEBUG_CHANNEL) directly to prim or avatar target anywhere within the region]
+llRegionSayTo(key target, integer channel, string msg)|
+[llSetMemoryLimit | Request limit bytes to be reserved for this script.Returns a success/failure flag (STATUS_OK when sucessful, another of the STATUS_* flags on failure) for whether the memory limit was set.Only relevant for Mono-compiled scripts.]
+llSetMemoryLimit(integer limit)|
+[llGetMemoryLimit | Get the maximum memory a script can use.Returns the integer amount of memory the script can use in bytes.]
+llGetMemoryLimit()|
+[llSetLinkMedia | Set the media params for a particular face on linked prim. List is a set of name/value pairs (in no particular order). If media is not already on this object, add it. Params not specified are unchanged, or if new media is added set to the default specified.]
+llSetLinkMedia(integer link, integer face, list params)|
+[llGetLinkMedia | Get the media params for a particular face on linked prim, given the desired list of names. Returns a list of values in the order requested. Returns an empty list if no media exists on the face.]
+llGetLinkMedia(integer link, integer face, list params)|
+[llClearLinkMedia | Clears (deletes) the media and all params from the given face on linked prim.]
+llClearLinkMedia(integer link, integer face)|
+[llSetLinkCamera | Sets the camera eye offset, and the offset that camera is looking at, for avatars that sit on the linked prim.The two vector parameters are offsets relative to the object's center and expressed in local coordinates.]
+llSetLinkCamera(integer link, vector eye, vector at)|
+[llSetContentType | Set the Internet media type of an LSL HTTP server response.content_type may be one of CONTENT_TYPE_TEXT (default) "text/plain", or CONTENT_TYPE_HTML "text/html", only valid for embedded browsers on content owned by the person viewing. Falls back to "text/plain" otherwise.]
+llSetContentType(key request_id, integer content_type)|
+[llLinkSitTarget | Set the sit location for this object (if offset == <0,0,0> clear it)]
+llLinkSitTarget(integer link, vector offset, rotation rot)|
+[llAvatarOnLinkSitTarget | If an avatar is sitting on the sit target, return the avatar's key, NULL_KEY otherwise]
+llAvatarOnLinkSitTarget(integer link)|
+[llAvatarOnLinkSitTarget | If an avatar is sitting on the sit target, return the avatar's key, NULL_KEY otherwise]
+llAvatarOnLinkSitTarget()|
+[llSetVelocity | Sets an objects velocity, in local coords if local == TRUE (if the script is physical)]
+llSetVelocity(vector velocity, integer local)|
+[llCastRay | Casts a ray into the physics world from 'start' to 'end' and returns data according to details in params]
+llCastRay(vector start, vector end, list params)|
+[llGetMassMKS | Returns the mass of the linkset in kilograms]
+llGetMassMKS()|
+[llSetPhysicsMaterial | Sets the requested attributes of the root object's physics material]
+llSetPhysicsMaterial(integer flags, float gravity_multiplier, float restitution, float friction, float density)|
+[llGetPhysicsMaterial | Returns the gravity multiplier, restitution, friction, and density of the linkset as a list in that order]
+llGetPhysicsMaterial()|
+[llManageEstateAccess | To add or remove agents from the estate's agent access or ban lists or groups from the estate's group access list.Only works for objects owned by the Estate Owner or an Estate Manager.Returns TRUE if successful and FALSE if throttled, on invalid action, on invalid or null id, or if object owner is not allowed to manage the estate.'action' can be any of: ESTATE_ACCESS_ALLOWED_[AGENT/GROUP]_[ADD/REMOVE] or ESTATE_ACCESS_BANNED_AGENT_[ADD/REMOVE].]
+llManageEstateAccess(integer action, key id)|
+[llSetKeyframedMotion | Requests that a nonphysical object be keyframed according to keyframe list]
+llSetKeyframedMotion(list keyframes, list options)|
+[llTransferLindenDollars | Transfer amount of linden dollars (L$) from script owner to destination. Returns a key to a corresponding transaction_result event for the success of the transfer.]
+llTransferLindenDollars(key destination, integer amount)|
+[llGetParcelMusicURL | Gets the streaming audio URL for the parcel of land on which the object is located]
+llGetParcelMusicURL()|
+[llScriptProfiler | Enabled or disables script profiling options. Currently only supports PROFILE_SCRIPT_MEMORY (mono only) and PROFILE_NONE.MAY SIGNIFICANTLY REDUCE SCRIPT PERFORMANCE!]
+llScriptProfiler(integer flags)|
+[llGetSPMaxMemory | Returns the maximum used memory for the current script. Only valid after using PROFILE_SCRIPT_MEMORY. Non-mono scripts always use 16k.]
+llGetSPMaxMemory()|
+[llGetUsedMemory | Returns the current used memory for the current script. Non-mono scripts always use 16k.]
+llGetUsedMemory()|
+[llSetAngularVelocity | Sets an objects angular velocity, in local coords if local == TRUE (if the script is physical)]
+llSetAngularVelocity(vector angular_velocity, integer local)|
+[llSetRegionPos | Sets the position anywhere within the region (if the object isn't physical)]
+llSetRegionPos(vector pos)|
+[llGetAgentList | Requests a list of agents currently in the region, limited by the scope parameter]
+llGetAgentList(integer scope, list options)|
+[llAttachToAvatarTemp | Attaches the object to the avatar who has granted permission to the script, with the exception that the object will not create new inventory for the user, and will disappear on detach or disconnect]
+llAttachToAvatarTemp(integer attach_point)|
+[llTeleportAgent | Requests a teleport of avatar to a landmark stored in the object's inventory. If no landmark is provided (an empty string), the avatar is teleported to the location position in the current region. In either case, the avatar is turned to face the position given by look_at in local coordinates.]
+llTeleportAgent(key avatar, string landmark, vector position, vector look_at)|
+[llTeleportAgentGlobalCoords | Teleports an agent to set of a region_coordinates within a region at the specified global_coordinates. The agent lands facing the position defined by look_at local coordinates.A region's global coordinates can be retrieved using llRequestSimulatorData(region_name, DATA_SIM_POS).]
+llTeleportAgentGlobalCoords(key agent, vector global_coordinates, vector region_coordinates, vector look_at)|
+[llGenerateKey | Return a unique generated key]
+llGenerateKey()|
+[llNavigateTo | For AI Character: Navigate to destination]
+llNavigateTo(vector point, list options)|
+[llCreateCharacter | Convert linkset to AI Character which can navigate the world]
+llCreateCharacter(list options)|
+[llPursue | For AI Character: Chase after a target]
+llPursue(key target, list options)|
+[llWanderWithin | For AI Character: Wander within a specified volume]
+llWanderWithin(vector center, vector radius, list options)|
+[llWanderWithin | For AI Character: Wander within a specified volume]
+llWanderWithin(vector center, float radius, list options)|
+[llFleeFrom | For AI Character: Flee from a point]
+llFleeFrom(vector source, float radius, list options)|
+[llPatrolPoints | For AI Character: Patrol a list of points]
+llPatrolPoints(list points, list options)|
+[llExecCharacterCmd | For AI Character: Execute a character command]
+llExecCharacterCmd(integer cmd, list options)|
+[llDeleteCharacter | Convert linkset from AI Character to Physics object]
+llDeleteCharacter()|
+[llUpdateCharacter | Change the AI Character's settings]
+llUpdateCharacter(list options)|
+[llEvade | For AI Character: Evade a specified target]
+llEvade(key target, list options)|
+[llGetClosestNavPoint | For AI Character: Get the closest navigable point to the point provided]
+llGetClosestNavPoint(vector point, list options)|
+[llGetStaticPath | Returns a list of position vectors indicating pathfinding waypoints between positions at start and end, for a character of a given radius]
+llGetStaticPath(vector start, vector end, float radius, list params)|
+[llGetSimStats | Returns the value of a particular simulator statistic]
+llGetSimStats(integer stat_type)|
+[llSetAnimationOverride | Set the animation that will play for the given animation state. Requires PERMISSION_OVERRIDE_ANIMATIONS.]
+llSetAnimationOverride(string anim_state, string anim)|
+[llGetAnimationOverride | Get the name of the animation currently set for the given animation state. Requires either PERMISSION_OVERRIDE_ANIMATIONS or PERMISSION_TRIGGER_ANIMATION.]
+llGetAnimationOverride(string anim_state)|
+[llResetAnimationOverride | Resets the animation for the given animation state to the default. The special value "ALL" will reset the animations for all states. Requires PERMISSION_OVERRIDE_ANIMATIONS.]
+llResetAnimationOverride(string anim_state)|
+[llJson2List | Converts the top level of the json string to a list]
+llJson2List(string json)|
+[llList2Json | Converts either a strided list of key:value pairs to a JSON_OBJECT or a list of values to a JSON_ARRAY. type must be either JSON_OBJECT or JSON_ARRAY.]
+llList2Json(string type, list values)|
+[llJsonGetValue | Gets the value indicated by specifiers from the json string]
+llJsonGetValue(string json, list specifiers)|
+[llJsonSetValue | Returns a new json string that is the json given with the value indicated by specifiers set to value]
+llJsonSetValue(string json, list specifiers, string value)|
+[llJsonValueType | Returns the type constant for the value in json indicated by specifiers]
+llJsonValueType(string json, list specifiers)|
+[llReturnObjectsByID | Returns to their owners the objects provided as a list of object keys. The return value is the number of objects successfully returned, or an ERR_* flag.]
+llReturnObjectsByID(list objects)|
+[llReturnObjectsByOwner | Returns to the owner the objects, limited by the scope parameter. The return value is the number of objects successfully returned, or an ERR_* flag.]
+llReturnObjectsByOwner(key owner, integer scope)|
+[llXorBase64 | Performs an exclusive or on two Base64 strings and returns a Base64 string.str2 repeats if it is shorter than str1.]
+llXorBase64(string str1, string str2)|
+[llScaleByFactor | Attempts to resize the entire object by scaling_factor, maintaining the size-position ratios of the prims.]
+llScaleByFactor(float scaling_factor)|
+[llGetMinScaleFactor | Returns a float that is the smallest scaling factor that can be used with llScaleByFactor to resize the object. This minimum is determined by the prim scale limits.]
+llGetMinScaleFactor()|
+[llGetMaxScaleFactor | Returns a float that is the largest scaling factor that can be used with llScaleByFactor to resize the object. This maximum is determined by the Linkability Rules and prim scale limits.]
+llGetMaxScaleFactor()|
+[llAgentInExperience | Determines whether or not the specified agent is in the script's experience.]
+llAgentInExperience(key agent)|
+[llGetExperienceDetails | Returns a list of details about the experience. This list has 6 components: [string experience_name, key owner_id, key experience_id, integer state, string state_message, key group_id].]
+llGetExperienceDetails(key experience_id)|
+[llRequestExperiencePermissions | Asks the agent for permission to participate in the script's Experience.]
+llRequestExperiencePermissions(key agent, string name)|
+[llReadKeyValue | Start an asynchronous transaction to read the value associated with the specified key (k) and the script's Experience.]
+llReadKeyValue(string k)|
+[llCreateKeyValue | Start an asynchronous transaction to create a key-value pair associated with the script's Experience using the given key (k) and value (v).]
+llCreateKeyValue(string k, string v)|
+[llUpdateKeyValue | Start an asynchronous transaction to update a key-value pair associated with the script's Experience with the given key (k) and value (v).]
+llUpdateKeyValue(string k, string v, integer checked, string original_value)|
+[llDeleteKeyValue | Start an asynchronous transaction to delete a key-value pair associated with the script's Experience with the given key (k).]
+llDeleteKeyValue(string k)|
+[llDataSizeKeyValue | Start an asynchronous transaction to request the used and total amount of data allocated for the Experience.]
+llDataSizeKeyValue()|
+[llKeysKeyValue | Start an asynchronous transaction to request a number of keys from the script's Experience.]
+llKeysKeyValue(integer start, integer count)|
+[llKeyCountKeyValue | Start an asynchronous transaction to request the number of keys with the script's Experience.]
+llKeyCountKeyValue()|
+[llGetExperienceErrorMessage | Returns a text description of a particular Experience LSL error constant.]
+llGetExperienceErrorMessage(integer value)|
+[llGetExperienceList | ]
+llGetExperienceList(key agent)|
+[llClearExperiencePermissions | ]
+llClearExperiencePermissions(key agent)|
+[llGetAttachedList | Returns a list of object keys corresponding to public attachments worn by an avatar.]
+llGetAttachedList(key avatar)|
+[llSitOnLink | The avatar specified by agent_id is forced to sit on the sit target of the prim indicated by the link parameter.]
+llSitOnLink(key agent_id, integer link)|
+[llName2Key | Returns a key the Agent ID for the named agent in the region.]
+llName2Key(string name)|
+[llRequestUserKey | Requests the Agent ID for the agent identified by name from the dataserver.]
+llRequestUserKey(string username)|
+[llStartObjectAnimation | Start animation for the current object.]
+llStartObjectAnimation(string anim)|
+[llStopObjectAnimation | Stop an animation for the current object.]
+llStopObjectAnimation(string anim)|
+[llGetObjectAnimationNames | Returns a list of names of animations playing in the current object.]
+llGetObjectAnimationNames()|
+[llGetEnvironment | Returns a list containing the current environment values for the parcel or region as a list of attributes.]
+llGetEnvironment(vector pos, list params)|
+[llGetDayLength | Return the number of seconds in the day cycle applied to the current parcel.]
+llGetDayLength()|
+[llGetDayOffset | Return the number of seconds added to the current time before calculating the current environmental time for the parcel.]
+llGetDayOffset()|
+[llGetRegionDayLength | Return the number of seconds in the day cycle applied to the current region.]
+llGetRegionDayLength()|
+[llGetRegionDayOffset | Return the number of seconds added to the current time before calculating the current environmental time for the region.]
+llGetRegionDayOffset()|
+[llGetMoonRotation | Return the rotation applied to the moon for the parcel at the location of the object containing the script.]
+llGetMoonRotation()|
+[llGetRegionMoonRotation | Return the rotation applied to the moon for the region at the location of the object containing the script.]
+llGetRegionMoonRotation()|
+[llGetRegionSunRotation | Return the rotation applied to the sun for the region at the location of the object containing the script.]
+llGetRegionSunRotation()|
+[llGetSunRotation | Return the rotation applied to the sun for the parcel at the location of the object containing the script.]
+llGetSunRotation()|
+[llGetMoonDirection | Returns a normalized vector to the current moon position at the location of object containing the script.]
+llGetMoonDirection()|
+[llGetRegionMoonDirection | Returns a normalized vector to the current moon position at the location of object containing the script.]
+llGetRegionMoonDirection()|
+[llGetRegionSunDirection | Returns a normalized vector to the current sun position at the location of object containing the script.]
+llGetRegionSunDirection()|
+[llGetRegionTimeOfDay | Returns a float that is the time in seconds with subsecond precision since Second Life midnight (per the region-scoped day cycle settings) or region up-time (time since when the region was brought online/rebooted); whichever is smaller.]
+llGetRegionTimeOfDay()|
+[llSetAgentEnvironment | This function sets environment values for an individual agent in an experience.]
+llSetAgentEnvironment(key agent_id, float transition, list params)|
+[llReplaceAgentEnvironment | Overrides the current region and parcel environment seen by an agent.]
+llReplaceAgentEnvironment(key agent_id, float transition, string environment)|
+[llTargetedEmail | Sends an email to the owner (selected by target) of an object with subject and message.]
+llTargetedEmail(integer target, string subject, string message)|
+[llsRGB2Linear | Returns a vector Transforms a color specified in the sRGB colorspace to the linear RGB colorspace.]
+llsRGB2Linear(vector srgb)|
+[llLinear2sRGB | Returns a vector Transforms a color specified in linear RGB colorspace into the sRGB colorspace.]
+llLinear2sRGB(vector color)|
+[llOrd | Calculate the ordinal value for a character in a string.]
+llOrd(string val, integer index)|
+[llChar | Construct a single character string from the supplied Unicode value.]
+llChar(integer code)|
+[llHash | Returns a 32bit hash for the provided string. Returns 0 if the input string is empty.]
+llHash(string val)|
+[llOpenFloater | Returns an integer Error code, or 0 if no error.]
+llOpenFloater(string floater_name, string url, list params)|
+[llGetInventoryAcquireTime | Returns a string with the timestamp that the item was added to the prim's inventory.]
+llGetInventoryAcquireTime(string item)|
+[llGetVisualParams | Returns a list of the details for agentid requested in params.]
+llGetVisualParams(key agentid, list params)|
+[llSetEnvironment | Overrides the environmental settings for a region or a parcel.]
+llSetEnvironment(vector position, list params)|
+[llReplaceEnvironment | Replaces the environment in a parcel or a region.]
+llReplaceEnvironment(vector position, string environment, integer track_no, integer day_length, integer day_offset)|
+[llGetObjectLinkKey | Returns the key of the linked prim link in the linkset identified by object_id.]
+llGetObjectLinkKey(key object_id, integer link)|
+[llSHA256String | Returns a string of 64 hex characters that is the SHA-256 security hash of src.]
+llSHA256String(string src)|
+[llLinksetDataReset | Erases all name:value pairs stored in the linkset's datastore.]
+llLinksetDataReset()|
+[llLinksetDataAvailable | Returns the number of bytes available in the linkset's datastore.]
+llLinksetDataAvailable()|
+[llLinksetDataCountKeys | Returns the number of unique keys that have been stored in the linkset's datastore.]
+llLinksetDataCountKeys()|
+[llLinksetDataWrite | Creates or updates an unprotected name:value pair from the linkset's datastore.]
+llLinksetDataWrite(string name, string value)|
+[llLinksetDataWriteProtected | Creates or updates a protected name:value pair from the linkset's datastore.]
+llLinksetDataWriteProtected(string name, string value, string password)|
+[llLinksetDataRead | Reads an unprotected name:value pair from the linkset's datastore.]
+llLinksetDataRead(string name)|
+[llLinksetDataReadProtected | Reads a protected name:value pair from the datastore.]
+llLinksetDataReadProtected(string name, string password)|
+[llLinksetDataDelete | Removes an unprotected name:value pair from the linkset's datastore.]
+llLinksetDataDelete(string name)|
+[llLinksetDataDeleteProtected | Removes a protected name:value pair from the linkset's datastore.]
+llLinksetDataDeleteProtected(string name, string password)|
+[llLinksetDataFindKeys | Returns a list of up to count keys from the datastore that match pattern, starting at the one indicated by start.]
+llLinksetDataFindKeys(string pattern, integer start, integer count)|
+[llLinksetDataListKeys | Returns a list of up to count keys in the datastore, starting at the one indicated by start.]
+llLinksetDataListKeys(integer start, integer count)|
+[llLinksetDataCountFound | Returns the number of keys in the linkset datastore that match the pattern supplied in the pattern.]
+llLinksetDataCountFound(string pattern)|
+[llLinksetDataDeleteFound | Finds and attempts to delete all keys in the data store that match pattern. This function will delete protected key-value pairs only if the matching pass phrase is passed in the pass parameter. The function returns a list, the first entry in the list is the number of keys deleted, the second entry in the list is the number of keys that could not be deleted due to a non-matching pass phrase. If this function successfully deletes any keys from the datastore it will trigger a linkset_data event with the type of LINKSET_DATA_MULTIDELETE, the key name will consist of a comma separated list of the key names removed from the datastore.]
+llLinksetDataDeleteFound(string pattern, string pass)|
+[llGetRenderMaterial | Returns a string that is the Material on face.]
+llGetRenderMaterial(integer face)|
+[llSetRenderMaterial | Sets the material of this prim's face. This function will clear most PRIM_GLTF_* properties on the face, with the exceptions of repeats, offsets, and rotation_in_radians.]
+llSetRenderMaterial(string material, integer face)|
+[llSetLinkRenderMaterial | If a prim exists in the link set at link, set material on face of that prim. This function will clear most PRIM_GLTF_* properties on the face, with the exceptions of repeats, offsets, and rotation_in_radians.]
+llSetLinkRenderMaterial(integer link, string material, integer face)|
+[llLinkPlaySound | Plays attached sound once at volume.]
+llLinkPlaySound(integer link, string sound, float volume, integer flags)|
+[llLinkStopSound | Stops the attached sound(s) currently playing, if they were started by llLoopSound.]
+llLinkStopSound(integer link)|
+[llLinkAdjustSoundVolume | Adjusts volume of attached sound (0.0 - 1.0).]
+llLinkAdjustSoundVolume(integer link, float volume)|
+[llLinkSetSoundQueueing | Set whether attached sounds wait for the current sound to finish. If queue is TRUE, queuing is enabled, if FALSE queuing is disabled. Sound queuing is disabled by default.]
+llLinkSetSoundQueueing(integer link, integer queue)|
+[llLinkSetSoundRadius | Establishes a hard cut-off radius for audibility of scripted sounds (both attached and triggered).]
+llLinkSetSoundRadius(integer link, float radius)|
+[llHMAC | Returns a string that is the Base64-encoded HMAC hash of msg when using hash algorithm algorithm and secret key private_key. This function supports md5, sha1, sha224, sha256, sha384, sha512 for algorithm.]
+llHMAC(string authkey, string message, string hashalg)|
+[llSignRSA | Returns a string that is the Base64-encoded RSA signature of msg when using hash algorithm algorithm and secret key private_key. Can be paired with llVerifyRSA to pass verifiable messages. This function supports md5, sha1, sha224, sha256, sha384, sha512 for algorithm.]
+llSignRSA(string private_key, string msg, string algorithm)|
+[llVerifyRSA | Returns an integer indicating whether the RSA signature is valid for msg when using hash algorithm algorithm and public RSA key public_key. Returns TRUE if the signature is verified, and FALSE otherwise. Can be paired with llSignRSA to validate the authenticity of messages from other LSL scripts. This function supports md5, sha1, sha224, sha256, sha384, sha512 for algorithm.]
+llVerifyRSA(string public_key, string msg, string signature, string algorithm)|
+[llReplaceSubString | Returns a string that is the result of replacing the first count matching instances pattern in src with replacement_pattern.]
+llReplaceSubString(string src, string pattern, string replacement_pattern, integer count)|
+[llList2ListSlice | Returns a list of the slice_index'th element of every stride in strided list whose index is a multiple of stride in the range start to end.]
+llList2ListSlice(list src, integer start, integer end, integer stride, integer slice_index)|
+[llListSortStrided | llListSortStrided is llListSort with the added parameter of stride_index, adding the flexibility to sort by any item in the stride. These routines use the same underlying code and have the same computational complexity.]
+llListSortStrided(list src, integer stride, integer stride_index, integer ascending)|
+[llListFindStrided | Returns the integer index of the first instance of test in src matching conditions.]
+llListFindStrided(list src, list test, integer start, integer end, integer stride)|
+[lsGetWindlightScene | ]
+lsGetWindlightScene(list rules)|
+[lsSetWindlightScene | ]
+lsSetWindlightScene(list rules)|
+[lsSetWindlightSceneTargeted | ]
+lsSetWindlightSceneTargeted(list rules, key target)|
+[lsClearWindlightScene | ]
+lsClearWindlightScene()|
+[osSetDynamicTextureURL | ]
+osSetDynamicTextureURL(string dynamicID, string contentType, string url, string extraParams, integer timer)|
+[osSetDynamicTextureURLBlend | ]
+osSetDynamicTextureURLBlend(string dynamicID, string contentType, string url, string extraParams, integer timer, integer alpha)|
+[osSetDynamicTextureURLBlendFace | ]
+osSetDynamicTextureURLBlendFace(string dynamicID, string contentType, string url, string extraParams, integer blend, integer disp, integer timer, integer alpha, integer face)|
+[osSetDynamicTextureURLBlendFace | ]
+osSetDynamicTextureURLBlendFace(string dynamicID, string contentType, string url, string extraParams, bool blend, integer disp, integer timer, integer alpha, integer face)|
+[osSetDynamicTextureData | ]
+osSetDynamicTextureData(string dynamicID, string contentType, string data, string extraParams, integer timer)|
+[osSetDynamicTextureDataFace | ]
+osSetDynamicTextureDataFace(string dynamicID, string contentType, string data, string extraParams, integer timer, integer face)|
+[osSetDynamicTextureDataBlend | ]
+osSetDynamicTextureDataBlend(string dynamicID, string contentType, string data, string extraParams, integer timer, integer alpha)|
+[osSetDynamicTextureDataBlendFace | ]
+osSetDynamicTextureDataBlendFace(string dynamicID, string contentType, string data, string extraParams, integer blend, integer disp, integer timer, integer alpha, integer face)|
+[osSetDynamicTextureDataBlendFace | ]
+osSetDynamicTextureDataBlendFace(string dynamicID, string contentType, string data, string extraParams, bool blend, integer disp, integer timer, integer alpha, integer face)|
+[osGetTerrainHeight | ]
+osGetTerrainHeight(integer x, integer y)|
+[osTerrainGetHeight | ]
+osTerrainGetHeight(integer x, integer y)|
+[osSetTerrainHeight | ]
+osSetTerrainHeight(integer x, integer y, float val)|
+[osTerrainSetHeight | ]
+osTerrainSetHeight(integer x, integer y, float val)|
+[osTerrainFlush | ]
+osTerrainFlush()|
+[osRegionRestart | ]
+osRegionRestart(float seconds)|
+[osRegionNotice | ]
+osRegionNotice(string msg)|
+[osRegionNotice | ]
+osRegionNotice(key agent_id, string msg)|
+[osConsoleCommand | ]
+osConsoleCommand(string Command)|
+[osConsoleCommand | ]
+osConsoleCommand(string Command)|
+[osSetParcelMusicURL | ]
+osSetParcelMusicURL(string url)|
+[osSetParcelMediaURL | ]
+osSetParcelMediaURL(string url)|
+[osSetPrimFloatOnWater | ]
+osSetPrimFloatOnWater(integer floatYN)|
+[osSetParcelSIPAddress | ]
+osSetParcelSIPAddress(string SIPAddress)|
+[osGetAgentIP | ]
+osGetAgentIP(string agent)|
+[osGetAgents | ]
+osGetAgents()|
+[osLocalTeleportAgent | ]
+osLocalTeleportAgent(key agent, vector position, vector velocity, vector lookat, integer flags)|
+[osTeleportAgent | ]
+osTeleportAgent(string agent, string regionName, vector position, vector lookat)|
+[osTeleportAgent | ]
+osTeleportAgent(string agent, integer regionX, integer regionY, vector position, vector lookat)|
+[osTeleportAgent | ]
+osTeleportAgent(string agent, vector position, vector lookat)|
+[osTeleportOwner | ]
+osTeleportOwner(string regionName, vector position, vector lookat)|
+[osTeleportOwner | ]
+osTeleportOwner(integer regionX, integer regionY, vector position, vector lookat)|
+[osTeleportOwner | ]
+osTeleportOwner(vector position, vector lookat)|
+[osAvatarPlayAnimation | ]
+osAvatarPlayAnimation(key avatar, string animation)|
+[osAvatarStopAnimation | ]
+osAvatarStopAnimation(key avatar, string animation)|
+[osForceAttachToAvatar | Attach the object containing this script to the avatar that owns it without asking for PERMISSION_ATTACH]
+osForceAttachToAvatar(integer attachment)|
+[osForceAttachToAvatarFromInventory | Attach an inventory item in the object containing this script to the avatar that owns it without asking for PERMISSION_ATTACH]
+osForceAttachToAvatarFromInventory(string itemName, integer attachment)|
+[osForceAttachToOtherAvatarFromInventory | Attach an inventory item in the object containing this script to any avatar in the region without asking for PERMISSION_ATTACH]
+osForceAttachToOtherAvatarFromInventory(string rawAvatarId, string itemName, integer attachmentPoint)|
+[osForceDetachFromAvatar | Detach the object containing this script from the avatar it is attached to without checking for PERMISSION_ATTACH]
+osForceDetachFromAvatar()|
+[osGetAvatarHomeURI | ]
+osGetAvatarHomeURI(string uuid)|
+[osGetNumberOfAttachments | Returns a strided list of the specified attachment points and the number of attachments on those points]
+osGetNumberOfAttachments(key avatar, list attachmentPoints)|
+[osForceOtherSit | ]
+osForceOtherSit(string avatar, string target)|
+[osMessageAttachments | Sends a specified message to the specified avatar's attachments on the specified attachment points]
+osMessageAttachments(key avatar, string message, list attachmentPoints, integer flags)|
+[osMovePen | ]
+osMovePen(string drawList, integer x, integer y)|
+[osDrawLine | ]
+osDrawLine(string drawList, integer startX, integer startY, integer endX, integer endY)|
+[osDrawLine | ]
+osDrawLine(string drawList, integer endX, integer endY)|
+[osDrawText | ]
+osDrawText(string drawList, string text)|
+[osDrawEllipse | ]
+osDrawEllipse(string drawList, integer width, integer height)|
+[osDrawFilledEllipse | ]
+osDrawFilledEllipse(string drawList, integer width, integer height)|
+[osDrawRectangle | ]
+osDrawRectangle(string drawList, integer width, integer height)|
+[osDrawFilledRectangle | ]
+osDrawFilledRectangle(string drawList, integer width, integer height)|
+[osDrawPolygon | ]
+osDrawPolygon(string drawList, list x, list y)|
+[osDrawFilledPolygon | ]
+osDrawFilledPolygon(string drawList, list x, list y)|
+[osDrawResetTransform | ]
+osDrawResetTransform(string drawList)|
+[osDrawRotationTransform | ]
+osDrawRotationTransform(string drawList, float x)|
+[osDrawScaleTransform | ]
+osDrawScaleTransform(string drawList, float x, float y)|
+[osDrawTranslationTransform | ]
+osDrawTranslationTransform(string drawList, float x, float y)|
+[osSetFontName | ]
+osSetFontName(string drawList, string fontName)|
+[osSetFontSize | ]
+osSetFontSize(string drawList, integer fontSize)|
+[osSetPenSize | ]
+osSetPenSize(string drawList, integer penSize)|
+[osSetPenColor | ]
+osSetPenColor(string drawList, string color)|
+[osSetPenColour | ]
+osSetPenColour(string drawList, string colour)|
+[osSetPenCap | ]
+osSetPenCap(string drawList, string direction, string type)|
+[osDrawImage | ]
+osDrawImage(string drawList, integer width, integer height, string imageUrl)|
+[osGetDrawStringSize | ]
+osGetDrawStringSize(string contentType, string text, string fontName, integer fontSize)|
+[osList2Double | ]
+osList2Double(list src, integer index)|
+[osSetRegionWaterHeight | ]
+osSetRegionWaterHeight(float height)|
+[osSetRegionSunSettings | ]
+osSetRegionSunSettings(integer useEstateSun, integer sunFixed, float sunHour)|
+[osSetRegionSunSettings | ]
+osSetRegionSunSettings(bool useEstateSun, bool sunFixed, float sunHour)|
+[osSetEstateSunSettings | ]
+osSetEstateSunSettings(integer sunFixed, float sunHour)|
+[osSetEstateSunSettings | ]
+osSetEstateSunSettings(bool sunFixed, float sunHour)|
+[osGetCurrentSunHour | ]
+osGetCurrentSunHour()|
+[osGetSunParam | ]
+osGetSunParam(string param)|
+[osSunGetParam | ]
+osSunGetParam(string param)|
+[osSetSunParam | ]
+osSetSunParam(string param, float value)|
+[osSunSetParam | ]
+osSunSetParam(string param, float value)|
+[osWindActiveModelPluginName | ]
+osWindActiveModelPluginName()|
+[osSetWindParam | ]
+osSetWindParam(string plugin, string param, float value)|
+[osGetWindParam | ]
+osGetWindParam(string plugin, string param)|
+[osGetParcelDwell | ]
+osGetParcelDwell(vector pos)|
+[osParcelJoin | ]
+osParcelJoin(vector pos1, vector pos2)|
+[osParcelSubdivide | ]
+osParcelSubdivide(vector pos1, vector pos2)|
+[osSetParcelDetails | ]
+osSetParcelDetails(vector pos, list rules)|
+[osParcelSetDetails | ]
+osParcelSetDetails(vector pos, list rules)|
+[osGetPhysicsEngineName | ]
+osGetPhysicsEngineName()|
+[osGetPhysicsEngineType | ]
+osGetPhysicsEngineType()|
+[osGetScriptEngineName | ]
+osGetScriptEngineName()|
+[osGetSimulatorVersion | ]
+osGetSimulatorVersion()|
+[osMessageObject | ]
+osMessageObject(key objectUUID, string message)|
+[osMakeNotecard | ]
+osMakeNotecard(string notecardName, string contents)|
+[osMakeNotecard | ]
+osMakeNotecard(string notecardName, list contents)|
+[osGetNotecardLine | ]
+osGetNotecardLine(string name, integer line)|
+[osGetNotecard | ]
+osGetNotecard(string name)|
+[osGetNumberOfNotecardLines | ]
+osGetNumberOfNotecardLines(string name)|
+[osAvatarName2Key | ]
+osAvatarName2Key(string firstname, string lastname)|
+[osKey2Name | ]
+osKey2Name(string id)|
+[osSHA256 | ]
+osSHA256(string input)|
+[osGetGridNick | ]
+osGetGridNick()|
+[osGetGridName | ]
+osGetGridName()|
+[osGetGridLoginURI | ]
+osGetGridLoginURI()|
+[osGetGridHomeURI | ]
+osGetGridHomeURI()|
+[osGetGridGatekeeperURI | ]
+osGetGridGatekeeperURI()|
+[osGetGridCustom | ]
+osGetGridCustom(string id)|
+[osGetThreatLevel | ]
+osGetThreatLevel(string id)|
+[osReturnObject | ]
+osReturnObject(key userID)|
+[osReturnObjects | ]
+osReturnObjects(float Parameter)|
+[osShutDown | ]
+osShutDown()|
+[osFormatString | ]
+osFormatString(string str, list strings)|
+[osMatchString | ]
+osMatchString(string src, string pattern, integer start)|
+[osReplaceString | ]
+osReplaceString(string src, string pattern, string replace, integer count, integer start)|
+[osLoadedCreationDate | ]
+osLoadedCreationDate()|
+[osLoadedCreationTime | ]
+osLoadedCreationTime()|
+[osLoadedCreationID | ]
+osLoadedCreationID()|
+[osGetLinkPrimitiveParams | ]
+osGetLinkPrimitiveParams(integer linknumber, list rules)|
+[osAddAgentToGroup | ]
+osAddAgentToGroup(key AgentID, string GroupName, string RequestedRole)|
+[osRezObject | ]
+osRezObject(string inventory, vector pos, vector vel, rotation rot, integer param, integer isRezAtRoot, integer doRecoil, integer SetDieAtEdge, integer CheckPos)|
+[osIsNpc | Check if the given key is an npc]
+osIsNpc(key npc)|
+[osNpcCreate | ]
+osNpcCreate(string user, string name, vector position, string notecard)|
+[osNpcCreate | ]
+osNpcCreate(string user, string name, vector position, string notecard, integer options)|
+[osNpcSaveAppearance | ]
+osNpcSaveAppearance(key npc, string notecard)|
+[osNpcSaveAppearance | ]
+osNpcSaveAppearance(key npc, string notecard, integer includeHuds)|
+[osNpcLoadAppearance | ]
+osNpcLoadAppearance(key npc, string notecard)|
+[osNpcGetPos | ]
+osNpcGetPos(key npc)|
+[osNpcMoveTo | ]
+osNpcMoveTo(key npc, vector position)|
+[osNpcMoveToTarget | ]
+osNpcMoveToTarget(key npc, vector target, integer options)|
+[osNpcGetOwner | Get the owner of the NPC]
+osNpcGetOwner(key npc)|
+[osNpcGetRot | ]
+osNpcGetRot(key npc)|
+[osNpcSetRot | ]
+osNpcSetRot(key npc, rotation rot)|
+[osNpcStopMoveToTarget | ]
+osNpcStopMoveToTarget(key npc)|
+[osNpcSay | ]
+osNpcSay(key npc, string message)|
+[osNpcSay | ]
+osNpcSay(key npc, integer channel, string message)|
+[osNpcSayTo | ]
+osNpcSayTo(key npc, key target, integer channel, string message)|
+[osNpcShout | ]
+osNpcShout(key npc, integer channel, string message)|
+[osNpcSit | ]
+osNpcSit(key npc, key target, integer options)|
+[osNpcStand | ]
+osNpcStand(key npc)|
+[osNpcRemove | ]
+osNpcRemove(key npc)|
+[osNpcPlayAnimation | ]
+osNpcPlayAnimation(key npc, string animation)|
+[osNpcStopAnimation | ]
+osNpcStopAnimation(key npc, string animation)|
+[osNpcTouch | ]
+osNpcTouch(key npcLSL_Key, key object_key, integer link_num)|
+[osNpcWhisper | ]
+osNpcWhisper(key npc, integer channel, string message)|
+[osNpcSetProfileAbout | ]
+osNpcSetProfileAbout(key npc, string about)|
+[osNpcSetProfileImage | ]
+osNpcSetProfileImage(key npc, string image)|
+[osOwnerSaveAppearance | ]
+osOwnerSaveAppearance(string notecard)|
+[osOwnerSaveAppearance | ]
+osOwnerSaveAppearance(string notecard, integer includeHuds)|
+[osAgentSaveAppearance | ]
+osAgentSaveAppearance(key agentId, string notecard)|
+[osAgentSaveAppearance | ]
+osAgentSaveAppearance(key agentId, string notecard, integer includeHuds)|
+[osGetMapTexture | ]
+osGetMapTexture()|
+[osGetRegionMapTexture | ]
+osGetRegionMapTexture(string regionNameOrID)|
+[osGetRegionSize | ]
+osGetRegionSize()|
+[osGetRegionStats | ]
+osGetRegionStats()|
+[osGetSimulatorMemory | ]
+osGetSimulatorMemory()|
+[osGetSimulatorMemoryKB | ]
+osGetSimulatorMemoryKB()|
+[osKickAvatar | ]
+osKickAvatar(string FirstName, string SurName, string alert)|
+[osKickAvatar | ]
+osKickAvatar(key agentId, string alert)|
+[osSetSpeed | ]
+osSetSpeed(key UUID, float SpeedModifier)|
+[osSetOwnerSpeed | ]
+osSetOwnerSpeed(float SpeedModifier)|
+[osGetHealth | ]
+osGetHealth(key agentId)|
+[osSetHealth | ]
+osSetHealth(key agentId, float health)|
+[osGetHealRate | ]
+osGetHealRate(key agentId)|
+[osSetHealRate | ]
+osSetHealRate(key agentId, float healrate)|
+[osCauseHealing | ]
+osCauseHealing(key agentId, float healing)|
+[osCauseDamage | ]
+osCauseDamage(key avatar, float damage)|
+[osCauseDamage | ]
+osCauseDamage(string avatar, float damage, string regionName, vector position, vector lookat)|
+[osDie | ]
+osDie(key uuid)|
+[osGetPrimitiveParams | ]
+osGetPrimitiveParams(key prim, list rules)|
+[osSetPrimitiveParams | ]
+osSetPrimitiveParams(key prim, list rules)|
+[osSetProjectionParams | ]
+osSetProjectionParams(integer projection, key texture, float fov, float focus, float amb)|
+[osSetProjectionParams | ]
+osSetProjectionParams(bool projection, key texture, float fov, float focus, float amb)|
+[osSetProjectionParams | ]
+osSetProjectionParams(key prim, integer projection, key texture, float fov, float focus, float amb)|
+[osSetProjectionParams | ]
+osSetProjectionParams(key prim, bool projection, key texture, float fov, float focus, float amb)|
+[osSetProjectionParams | ]
+osSetProjectionParams(integer linknumber, integer projection, key texture, float fov, float focus, float amb)|
+[osGetAvatarList | ]
+osGetAvatarList()|
+[osGetNPCList | ]
+osGetNPCList()|
+[osGetGender | ]
+osGetGender(key rawAvatarId)|
+[osUnixTimeToTimestamp | ]
+osUnixTimeToTimestamp(integer time)|
+[osForceBreakAllLinks | ]
+osForceBreakAllLinks()|
+[osForceBreakLink | ]
+osForceBreakLink(integer linknum)|
+[osForceCreateLink | ]
+osForceCreateLink(string target, integer parent)|
+[osGetInventoryDesc | ]
+osGetInventoryDesc(string item)|
+[osInviteToGroup | ]
+osInviteToGroup(key agentId)|
+[osEjectFromGroup | ]
+osEjectFromGroup(key agentId)|
+[osSetTerrainTexture | ]
+osSetTerrainTexture(integer level, key texture)|
+[osSetTerrainTextureHeight | ]
+osSetTerrainTextureHeight(integer corner, float low, float high)|
+[osIsUUID | Checks if thing is a UUID]
+osIsUUID(string thing)|
+[osMin | Wraps to Math.Min()]
+osMin(float a, float b)|
+[osMax | Wraps to Math.max()]
+osMax(float a, float b)|
+[osGetRezzingObject | Get the key of the object that rezzed this object]
+osGetRezzingObject()|
+[osSetContentType | Sets the response type for an HTTP request/response]
+osSetContentType(key id, string type)|
+[osDropAttachment | Attempts to drop an attachment to the ground]
+osDropAttachment()|
+[osForceDropAttachment | Attempts to drop an attachment to the ground while bypassing the script permissions]
+osForceDropAttachment()|
+[osDropAttachmentAt | Attempts to drop an attachment at the specified coordinates]
+osDropAttachmentAt(vector pos, rotation rot)|
+[osForceDropAttachmentAt | Attempts to drop an attachment at the specified coordinates while bypassing the script permissions]
+osForceDropAttachmentAt(vector pos, rotation rot)|
+[osListenRegex | Identical to llListen except for a bitfield which indicates which string parameters should be parsed as regex patterns]
+osListenRegex(integer channelID, string name, string ID, string msg, integer regexBitfield)|
+[osRegexIsMatch | Wraps to bool Regex.IsMatch(string input, string pattern)]
+osRegexIsMatch(string input, string pattern)|
+[osRequestURL | ]
+osRequestURL(list options)|
+[osRequestSecureURL | ]
+osRequestSecureURL(list options)|
+[osCheckODE | ]
+osCheckODE()|
+[osCollisionSound | ]
+osCollisionSound(string impact_sound, float impact_volume)|
+[osVolumeDetect | ]
+osVolumeDetect(integer detect)|
+[osGetInertiaData | ]
+osGetInertiaData()|
+[osClearInertia | ]
+osClearInertia()|
+[osSetInertia | ]
+osSetInertia(float mass, vector centerOfMass, vector principalInertiaScaled, rotation rot)|
+[osSetInertiaAsBox | ]
+osSetInertiaAsBox(float mass, vector boxSize, vector centerOfMass, rotation rot)|
+[osSetInertiaAsSphere | ]
+osSetInertiaAsSphere(float mass, float radius, vector centerOfMass)|
+[osSetInertiaAsCylinder | ]
+osSetInertiaAsCylinder(float mass, float radius, float length, vector centerOfMass, rotation lslrot)|
+[osTeleportObject | ]
+osTeleportObject(key objectUUID, vector targetPos, rotation targetrotation, integer flags)|
+[osGetLinkNumber | ]
+osGetLinkNumber(string name)|
+[osRound | ]
+osRound(float value, integer digits)|
+[osVecMagSquare | ]
+osVecMagSquare(vector a)|
+[osVecDistSquare | ]
+osVecDistSquare(vector a, vector b)|
+[osAngleBetween | ]
+osAngleBetween(vector a, vector b)|
+[osAdjustSoundVolume | ]
+osAdjustSoundVolume(integer linknum, float volume)|
+[osLoopSound | ]
+osLoopSound(integer linknum, string sound, float volume)|
+[osLoopSoundMaster | ]
+osLoopSoundMaster(integer linknum, string sound, float volume)|
+[osLoopSoundSlave | ]
+osLoopSoundSlave(integer linknum, string sound, float volume)|
+[osPlaySound | ]
+osPlaySound(integer linknum, string sound, float volume)|
+[osPlaySoundSlave | ]
+osPlaySoundSlave(integer linknum, string sound, float volume)|
+[osPreloadSound | ]
+osPreloadSound(integer linknum, string sound)|
+[osSetSoundRadius | ]
+osSetSoundRadius(integer linknum, float radius)|
+[osStopSound | ]
+osStopSound(integer linknum)|
+[osTriggerSound | ]
+osTriggerSound(integer linknum, string sound, float volume)|
+[osTriggerSoundLimited | ]
+osTriggerSoundLimited(integer linknum, string sound, float volume, vector top_north_east, vector bottom_south_west)|
+[osDetectedCountry | ]
+osDetectedCountry(integer number)|
+[osGetAgentCountry | ]
+osGetAgentCountry(key agentId)|
+[osStringSubString | ]
+osStringSubString(string src, integer start)|
+[osStringSubString | ]
+osStringSubString(string src, integer start, integer length)|
+[osStringStartsWith | ]
+osStringStartsWith(string src, string value, integer ignorecase)|
+[osStringEndsWith | ]
+osStringEndsWith(string src, string value, integer ignorecase)|
+[osStringIndexOf | ]
+osStringIndexOf(string src, string value, integer ignorecase)|
+[osStringIndexOf | ]
+osStringIndexOf(string src, string value, integer start, integer count, integer ignorecase)|
+[osStringLastIndexOf | ]
+osStringLastIndexOf(string src, string value, integer ignorecase)|
+[osStringLastIndexOf | ]
+osStringLastIndexOf(string src, string value, integer start, integer count, integer ignorecase)|
+[osStringRemove | ]
+osStringRemove(string src, integer start, integer count)|
+[osStringReplace | ]
+osStringReplace(string src, string oldvalue, string newvalue)|
+[osApproxEquals | ]
+osApproxEquals(float a, float b)|
+[osApproxEquals | ]
+osApproxEquals(float a, float b, float margin)|
+[osApproxEquals | ]
+osApproxEquals(vector va, vector vb)|
+[osApproxEquals | ]
+osApproxEquals(vector va, vector vb, float margin)|
+[osApproxEquals | ]
+osApproxEquals(rotation ra, rotation rb)|
+[osApproxEquals | ]
+osApproxEquals(rotation ra, rotation rb, float margin)|
+[osGetInventoryLastOwner | ]
+osGetInventoryLastOwner(string itemNameOrId)|
+[osGetInventoryItemKey | ]
+osGetInventoryItemKey(string name)|
+[osGetInventoryName | ]
+osGetInventoryName(key itemId)|
+[osGetInventoryDesc | ]
+osGetInventoryDesc(string itemNameOrId)|
+[osGetLastChangedEventKey | ]
+osGetLastChangedEventKey()|
+[osGetPSTWallclock | ]
+osGetPSTWallclock()|
+[osSlerp | ]
+osSlerp(rotation a, rotation b, float amount)|
+[osSlerp | ]
+osSlerp(vector a, vector b, float amount)|
+[osResetAllScripts | ]
+osResetAllScripts(integer AllLinkset)|
+[osIsNotValidNumber | ]
+osIsNotValidNumber(float v)|
+[osSetSitActiveRange | ]
+osSetSitActiveRange(float v)|
+[osSetLinkSitActiveRange | ]
+osSetLinkSitActiveRange(integer linkNumber, float v)|
+[osGetSitActiveRange | ]
+osGetSitActiveRange()|
+[osGetLinkSitActiveRange | ]
+osGetLinkSitActiveRange(integer linkNumber)|
+[osSetStandTarget | ]
+osSetStandTarget(vector v)|
+[osSetLinkStandTarget | ]
+osSetLinkStandTarget(integer linkNumber, vector v)|
+[osGetStandTarget | ]
+osGetStandTarget()|
+[osGetLinkStandTarget | ]
+osGetLinkStandTarget(integer linkNumber)|
+[osClearObjectAnimations | ]
+osClearObjectAnimations()|
+[osGetApparentTime | ]
+osGetApparentTime()|
+[osGetApparentTimeString | ]
+osGetApparentTimeString(integer format24)|
+[osGetApparentRegionTime | ]
+osGetApparentRegionTime()|
+[osGetApparentRegionTimeString | ]
+osGetApparentRegionTimeString(integer format24)|
+[osReplaceAgentEnvironment | ]
+osReplaceAgentEnvironment(key agentkey, integer transition, string daycycle)|
+[osReplaceParcelEnvironment | ]
+osReplaceParcelEnvironment(integer transition, string daycycle)|
+[osReplaceRegionEnvironment | ]
+osReplaceRegionEnvironment(integer transition, string daycycle, float daylen, float dayoffset, float altitude1, float altitude2, float altitude3)|
+[osResetEnvironment | ]
+osResetEnvironment(integer parcelOrRegion, integer transition)|
+[osParticleSystem | ]
+osParticleSystem(list rules)|
+[osLinkParticleSystem | ]
+osLinkParticleSystem(integer linknumber, list rules)|
+[osNpcLookAt | ]
+osNpcLookAt(key npckey, integer type, key objkey, vector offset)|
+[osAvatarType | ]
+osAvatarType(key avkey)|
+[osAvatarType | ]
+osAvatarType(string sFirstName, string sLastName)|
+[osListSortInPlace | ]
+osListSortInPlace(list src, integer stride, integer ascending)|
+[aaSetCloudDensity | ]
+aaSetCloudDensity(float density)|
+[aaUpdateDatabase | ]
+aaUpdateDatabase(string keyname, string value, string token)|
+[aaQueryDatabase | ]
+aaQueryDatabase(string keyname, string token)|
+[aaDeserializeXMLValues | ]
+aaDeserializeXMLValues(key xmlFile)|
+[aaDeserializeXMLKeys | ]
+aaDeserializeXMLKeys(key xmlFile)|
+[aaSetConeOfSilence | ]
+aaSetConeOfSilence(float radius)|
+[aaSerializeXML | ]
+aaSerializeXML(list keynames, list values)|
+[aaGetTeam | ]
+aaGetTeam(key id)|
+[aaGetHealth | ]
+aaGetHealth(key id)|
+[aaJoinCombat | ]
+aaJoinCombat(key id)|
+[aaLeaveCombat | ]
+aaLeaveCombat(key id)|
+[aaJoinCombatTeam | ]
+aaJoinCombatTeam(key id, string team)|
+[aaRequestCombatPermission | ]
+aaRequestCombatPermission(string ID)|
+[aaThawAvatar | ]
+aaThawAvatar(string ID)|
+[aaFreezeAvatar | ]
+aaFreezeAvatar(string ID)|
+[aaGetTeamMembers | ]
+aaGetTeamMembers(string team)|
+[aaGetLastOwner | ]
+aaGetLastOwner()|
+[aaGetLastOwner | ]
+aaGetLastOwner(string PrimID)|
+[aaSayDistance | ]
+aaSayDistance(integer channelID, float Distance, string text)|
+[aaSayTo | ]
+aaSayTo(string userID, string text)|
+[aaGetWalkDisabled | ]
+aaGetWalkDisabled(string userID)|
+[aaSetWalkDisabled | ]
+aaSetWalkDisabled(string userID, bool Value)|
+[aaGetFlyDisabled | ]
+aaGetFlyDisabled(string userID)|
+[aaSetFlyDisabled | ]
+aaSetFlyDisabled(string userID, bool Value)|
+[aaAvatarFullName2Key | ]
+aaAvatarFullName2Key(string username)|
+[aaRaiseError | ]
+aaRaiseError(string message)|
+[aaGetText | ]
+aaGetText()|
+[aaGetTextColor | ]
+aaGetTextColor()|
+[aaSetEnv | ]
+aaSetEnv(string name, list value)|
+[aaGetIsInfiniteRegion | ]
+aaGetIsInfiniteRegion()|
+[aaAllRegionInstanceSay | ]
+aaAllRegionInstanceSay(integer channelID, string text)|
+[aaWindlightGetSceneIsStatic | ]
+aaWindlightGetSceneIsStatic()|
+[aaWindlightGetSceneDayCycleKeyFrameCount | ]
+aaWindlightGetSceneDayCycleKeyFrameCount()|
+[aaWindlightGetDayCycle | ]
+aaWindlightGetDayCycle()|
+[aaWindlightAddDayCycleFrame | ]
+aaWindlightAddDayCycleFrame(float dayCyclePosition, integer dayCycleFrameToCopy)|
+[aaWindlightRemoveDayCycleFrame | ]
+aaWindlightRemoveDayCycleFrame(integer dayCycleFrame)|
+[aaWindlightGetScene | ]
+aaWindlightGetScene(list rules)|
+[aaWindlightGetScene | ]
+aaWindlightGetScene(integer dayCycleKeyFrame, list rules)|
+[aaWindlightSetScene | ]
+aaWindlightSetScene(list list)|
+[aaWindlightSetScene | ]
+aaWindlightSetScene(integer dayCycleIndex, list list)|
+[botGetWaitingTime | ]
+botGetWaitingTime(integer waitTime)|
+[botSetMap | ]
+botSetMap(string keyOfBot, list positions, list movementType, integer flags)|
+[botCreateBot | ]
+botCreateBot(string FirstName, string LastName, string appearanceToClone, vector startPos)|
+[botRemoveBot | ]
+botRemoveBot(string bot)|
+[botPauseMovement | ]
+botPauseMovement(string bot)|
+[botResumeMovement | ]
+botResumeMovement(string bot)|
+[botFollowAvatar | ]
+botFollowAvatar(string bot, string avatarName, float startFollowDistance, float endFollowDistance)|
+[botStopFollowAvatar | ]
+botStopFollowAvatar(string bot)|
+[botSendChatMessage | ]
+botSendChatMessage(string bot, string message, integer sayType, integer channel)|
+[botSendIM | ]
+botSendIM(string bot, string user, string message)|
+[botSetShouldFly | ]
+botSetShouldFly(string keyOfBot, integer ShouldFly)|
+[botSitObject | ]
+botSitObject(string bot, string objectID, vector offset)|
+[botStandUp | ]
+botStandUp(string bot)|
+[botTouchObject | ]
+botTouchObject(string bot, string objectID)|
+[botAddTag | ]
+botAddTag(string bot, string tag)|
+[botGetBotsWithTag | ]
+botGetBotsWithTag(string tag)|
+[botRemoveBotsWithTag | ]
+botRemoveBotsWithTag(string tag)|
+
+[KeyWords]
+llOwnerSay
